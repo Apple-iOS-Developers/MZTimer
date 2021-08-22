@@ -1,7 +1,6 @@
 # SharableTimer
 WatchOS Sharable Timer Side project
 
-
 ### 기능 요구사항
 - [x] 타이머를 잴 수 있는 이벤트를 Create Read Update Delete 할 수 있다.  
 - [ ] 이벤트 별, 기간별 통계를 볼 수 있다.  
@@ -122,3 +121,7 @@ xxx님이운동을 완료함
     - 타이머 일시정지 상태에서 terminated -> foreground
     - 
 - 푸쉬 노티
+
+### update 2021/08/23
+- [작업 내역 및 계획](https://github.com/Apple-iOS-Developers/MZTimer/blob/main/%EC%9E%91%EC%97%85%EA%B3%84%ED%9A%8D%EC%9D%BC%EC%A7%80.md)
+
