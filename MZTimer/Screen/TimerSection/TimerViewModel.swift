@@ -14,27 +14,24 @@ class TimerViewModel: NSObject, ObservableObject {
     @Published var seconds : String = "00"
     @Published var minutes: String = "00"
     @Published var hours: String = "00"
-
-    private var mTimer : Timer?
-    private var passedTimeSeconds = 0
+    
     @Published var isPaused: Bool = false {
         didSet {
             UserDefaults.standard.setValue(isPaused, forKey: "isPaused")
         }
     }
 
+    private var mTimer : Timer?
+    private var passedTimeSeconds = 0
     private var currentCategory: Category = Category(emoji: "", title: "")
     private let timeInterval : TimeInterval = 1
     private var startDate: Date?
-    private var fromBackground: Bool = false
 
     override init() {
         super.init()
-        //unexpected termination
-        NotificationCenter.default.addObserver(forName: UIApplication.willTerminateNotification, object: nil, queue: .main) { [weak self] _ in
+
+        NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: .main) { [weak self] _ in
             guard let `self` = self else { return }
-            // 타이머 진행 중일 때 앱이 꺼지면 현재 이벤트를 임시저장 한다.
-            self.fromBackground = false
             if self.getTimerStatus() {
                 self.tempSave(event:Event(emoji: self.currentCategory.emoji, title: self.currentCategory.title, time: self.passedTimeSeconds, startDate: self.startDate ?? Date()))
             }
@@ -42,38 +39,22 @@ class TimerViewModel: NSObject, ObservableObject {
 
         NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: .main) { [weak self] _ in
             guard let `self` = self else { return }
-            print("현재 앱 상태 타이머 진행중 \(self.getTimerStatus()) \(self.getTempEvent()) \(self.getIsPaused())")
-
-
-            if self.getTimerStatus() { // 타이머 진행 중일 때 Foregorund
-                let event = self.getTempEvent()
-                NotificationCenter.default.post(name: .AppEnterForeground, object: nil, userInfo: ["event":event as Any] )
-                if self.getIsPaused() { // 타이머 paused 일 때 Foregorund
-                    self.passedTimeSeconds = event?.time ?? 0
-                    self.timerCallback()
-                    self.isPaused = true
-                } else { // 타이머 진행 중일 때 Foregorund
-                    let passedTime =  Int(Date().timeIntervalSince(event?.startDate ?? Date()))
-                    print("지난 시간 \(passedTime)")
-                    self.passedTimeSeconds = passedTime
-                    self.isPaused = false
-                    if self.fromBackground { // 타이머 진행 중일 때 Background -> Foregorund
-
-                    } else { // terminated -> foregound 경우
-                        self.addTimer()
-                        self.timerCallback()
-                    }
-                }
-
-            }
-        }
-
-        NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: .main) { [weak self] _ in
-            guard let `self` = self else { return }
-            // 타이머 진행중일 때 Background 들어가면
-            self.fromBackground = true
             if self.getTimerStatus() {
-                self.tempSave(event:Event(emoji: self.currentCategory.emoji, title: self.currentCategory.title, time: self.passedTimeSeconds, startDate: self.startDate ?? Date()))
+                if self.mTimer == nil {
+                    self.addTimer()
+                }
+                let event = self.getTempEvent()
+                self.currentCategory = Category(emoji: event?.emoji ?? "", title: event?.title ?? "")
+                self.startDate = event?.startDate
+                if self.getIsPaused() {
+                    self.isPaused = true
+                    self.passedTimeSeconds = event?.time ?? 0
+                } else {
+                    self.isPaused = false
+                    self.passedTimeSeconds = Int(Date().timeIntervalSince(event?.startDate ?? Date()))
+                }
+                self.calculateTime()
+                NotificationCenter.default.post(name: .AppEnterForeground, object: nil, userInfo: ["event":event as Any] )
             }
         }
     }
@@ -141,14 +122,13 @@ class TimerViewModel: NSObject, ObservableObject {
                     RunLoop.current.run()
                 }
             }
-        }else{
+        } else {
             DispatchQueue.global(qos: .background).async { [self] in
                 mTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
                 RunLoop.current.run()
             }
         }
     }
-
 }
 extension TimerViewModel {
     private func getIsPaused() -> Bool {

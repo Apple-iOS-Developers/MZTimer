@@ -76,6 +76,7 @@ class CategoryListEndViewModel: NSObject, ObservableObject {
     override init() {
         super.init()
         category = UserDefaultStorage.shared.loadCategory()
+        NotificationCenter.default.addObserver(self, selector: #selector(didAppBecomeForegorundReceived), name: .AppEnterForeground, object: nil)
     }
 
     func resetSelectedCategory() {
@@ -85,5 +86,10 @@ class CategoryListEndViewModel: NSObject, ObservableObject {
     func categorySelected() -> Bool {
         return selectedCategory.titleWithEmoji() == " " ? false : true
     }
-
+    
+    @objc func didAppBecomeForegorundReceived(_ notification: Notification) {
+        if let eventInfo = notification.userInfo?["event"] as? Event {
+            selectedCategory = Category(emoji: eventInfo.emoji, title: eventInfo.title)
+        }
+    }
 }
