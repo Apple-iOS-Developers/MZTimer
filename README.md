@@ -95,7 +95,8 @@ xxx님이운동을 완료함
 - imessage 에서 여러명의 번호를 통해 메시지를 보내면 아이폰 유저 일 경우(imessage가 가능한 경우) 단체 메시지로 전송됨(단체 카톡처럼)
     - imessage 단체방에서는 서로간의 휴대폰 번호를 알 수 있음 (모르는 사람끼리 단체방이 만들어짐)
     - 현재 여러개 메시지를 imessage로 전송할때 개별로 보낼 수 있는 방법 없음ㅠ
-
+- 타이머 1초마다 바뀐 시간을 표시하는데 ContentView 전체가 다시 그려지고 있다.
+    - 원래 이런건가?
 
 ### update 2021/06/12
 - [x] 모든 기능 워치 없이 사용 가능하게 먼저 구현 후 워치 대응하자
@@ -121,11 +122,11 @@ xxx님이운동을 완료함
     - idle 상태에서 background -> foreground [테스트완료]
     - idle 상태에서 terminated -> foreground [테스트완료]
     - 타이머 시작 상태에서 background -> foreground [테스트완료]
-    - 타이머 시작 상태에서 terminated -> foreground 
+    - 타이머 시작 상태에서 terminated -> foreground [테스트완료]
     - 타이머 일시정지 상태에서 background -> foreground [테스트완료]
-    - 타이머 일시정지 상태에서 terminated -> foreground
+    - 타이머 일시정지 상태에서 terminated -> foreground [테스트완료]
     - 
-- 푸쉬 노티
+- 푸쉬 노티 있으면 좋을 것 같음
 
 ### update 2021/08/23
 - [작업 내역 및 계획](https://github.com/Apple-iOS-Developers/MZTimer/blob/main/%EC%9E%91%EC%97%85%EA%B3%84%ED%9A%8D%EC%9D%BC%EC%A7%80.md)
