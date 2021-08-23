@@ -15,13 +15,29 @@ class ViewModel: NSObject, ObservableObject {
     @Published var contacts: [ContactModel] = UserDefaultStorage.shared.loadContact()
 
     @Published var currentObject: String = "There are currently no events"
+    
+    var cancellables = Set<AnyCancellable>()
 
     override init() {
         super.init()
-        NotificationCenter.default.addObserver(self, selector: #selector(eventNotificationReceived), name: .EventUpdated, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(categoryNotificationReceived), name: .CategoryUpdated, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(contactNotificationReceived), name: .ContactUpdated, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(didAppBecomeForegorundReceived), name: .AppEnterForeground, object: nil)
+        
+        NotificationCenter.default.publisher(for: .EventUpdated).sink { _ in
+            self.reloadEvents()
+        }.store(in: &cancellables)
+        
+        NotificationCenter.default.publisher(for: .CategoryUpdated).sink { _ in
+            self.reloadCategories()
+        }.store(in: &cancellables)
+        
+        NotificationCenter.default.publisher(for: .ContactUpdated).sink { _ in
+            self.reloadContacts()
+        }.store(in: &cancellables)
+        
+        NotificationCenter.default.publisher(for: .AppEnterForeground).sink { notification in
+            if let eventInfo = notification.userInfo?["event"] as? Event {
+                self.currentObject = eventInfo.emoji + eventInfo.title
+            }
+        }.store(in: &cancellables)
     }
 
     public func reloadData() {
@@ -41,20 +57,5 @@ class ViewModel: NSObject, ObservableObject {
     private func reloadContacts() {
         contacts.removeAll()
         contacts = UserDefaultStorage.shared.loadContact()
-    }
-
-    @objc func eventNotificationReceived() {
-        reloadEvents()
-    }
-    @objc func categoryNotificationReceived() {
-        reloadCategories()
-    }
-    @objc func contactNotificationReceived() {
-        reloadContacts()
-    }
-    @objc func didAppBecomeForegorundReceived(_ notification: Notification) {
-        if let eventInfo = notification.userInfo?["event"] as? Event {
-            currentObject = eventInfo.emoji + eventInfo.title
-        }
     }
 }
