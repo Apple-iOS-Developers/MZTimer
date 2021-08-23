@@ -13,21 +13,17 @@ class UserDefaultStorage {
     static let shared = UserDefaultStorage()
     
     init() {
-
-        //        deleteCategoryAll()
-        //        category.append(Category(emoji: "📕", title: "공부하기"))
-        //        category.append(Category(emoji: "🔍", title: "독서"))
-        //        category.append(Category(emoji: "♥️", title: "데이트"))
-        //        category.append(Category(emoji: "🔈", title: "음악듣기"))
-
-        //        deleteEventAll()
-        //        event.append(Event(emoji: "📕", title: "공부하기", time: "2시간25분34초", date: "2021.03.04"))
-        //        event.append(Event(emoji: "🔍", title: "독서", time: "0시간25분34초", date: "2021.03.04"))
-        //        event.append(Event(emoji: "♥️", title: "데이트", time: "1시간12분34초", date: "2021.03.12"))
-        //        event.append(Event(emoji: "📕", title: "공부하기", time: "4시간05분34초", date: "2021.03.14"))
-        //        event.append(Event(emoji: "📕", title: "공부하기", time: "0시간21분34초", date: "2021.03.15"))
-
-
+        if category.count == 0 {
+            category.append(Category(emoji: "📕", title: "예시 카테고리"))
+        }
+        
+        if event.count == 0 {
+            event.append(Event(emoji: "🔍", title: "예시 이벤트 입니다.", time: 100000, endDate: Date()))
+        }
+        
+        if contact.count == 0 {
+            contact.append(ContactModel(name: "예시 연락처 입니다.", phoneNumber: "010-XXXX-XXXX", memo: "예시 친구"))
+        }
     }
     
     private var category: [Category] {

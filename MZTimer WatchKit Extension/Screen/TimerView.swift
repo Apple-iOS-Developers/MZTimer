@@ -56,7 +56,7 @@ struct TimerView: View {
                         let messageBody = "Hello World! 공부 \("\(hour):\(minute):\(second)")했슴둥!"
                         let urlSafeBody = messageBody.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
                         let phoneNumber = ["010-5577-0860","010-2767-6818"]
-                        let phoneString = phoneNumber.joined(separator: ",")
+                        let _ = phoneNumber.joined(separator: ",")
                         
                         if let urlSafeBody = urlSafeBody, let url = NSURL(string: "sms:/open?addresses=010-5577-0860,010-2767-6818&&body=\(urlSafeBody)") {
                             WKExtension.shared().openSystemURL(url as URL)

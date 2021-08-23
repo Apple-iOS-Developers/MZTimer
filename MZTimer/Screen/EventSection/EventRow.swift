@@ -14,6 +14,7 @@ struct EventRow: View {
     }
     @State var pushEndView: Bool = false
     @State var longPressed = false
+    
     var body: some View {
         NavigationLink(
             destination: EventEndView(event: event),
@@ -34,7 +35,7 @@ struct EventRow: View {
                                     .font(.title)
                                     .foregroundColor(.textGreen)
                                 Spacer()
-                                Text("\(event.startDate.dateWithTimeString())")
+                                Text("\(event.startDate.dateWithoutTimeString())")
                                     .font(.caption)
                                     .padding(.trailing, 10)
                                     .foregroundColor(.white)
