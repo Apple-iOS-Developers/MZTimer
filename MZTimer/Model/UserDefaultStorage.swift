@@ -100,9 +100,11 @@ class UserDefaultStorage {
         updateEvent()
 
         if UserDefaults.standard.bool(forKey: "SendMessage") {
-            makeMessage(message: "\(event.emoji) \(event.title)", time: "\(event.time)")
+            iMessageHelper.makeMessage(message: "\(event.emoji) \(event.title)", event: event)
         }
-        iCalenderHelper.shared.addEvent(event: iCalenderEvent(title: "\(event.emoji) \(event.title)", note: "From MZTimer", time: event.time, startDate: event.startDate))
+        if UserDefaults.standard.bool(forKey: "AddCalender") {
+            iCalenderHelper.shared.addEvent(event: iCalenderEvent(title: "\(event.emoji) \(event.title)", note: "From MZTimer", time: event.time, startDate: event.startDate))
+        }
     }
     public func deleteEventAll(){
         self.event.removeAll()
@@ -147,20 +149,6 @@ extension Notification.Name {
     static let EventUpdated = Notification.Name("EventUpdated")
     static let ContactUpdated = Notification.Name("ContactUpdated")
     static let AppEnterForeground = Notification.Name("AppEnterForeground")
-}
-
-
-extension UserDefaultStorage {
-    public func makeMessage(message: String, time: String) {
-        let messageBody = "김태형님이 \n[\(message)]를 완료했습니다 \n 수행시간:\(time)시"
-        let urlSafeBody = messageBody.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
-        let phoneNumber: [String] = UserDefaultStorage.shared.loadContact().map{ $0.phoneNumber }
-        let phoneString = phoneNumber.joined(separator: ",")
-
-        if let urlSafeBody = urlSafeBody, let url = NSURL(string: "sms:/open?addresses=\(phoneString)&&body=\(urlSafeBody)") {
-            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
-        }
-    }
 }
 
 extension UserDefaultStorage {

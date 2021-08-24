@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83E7B54926D555A700292B35 /* iMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7B54826D555A700292B35 /* iMessageHelper.swift */; };
 		CE07EDB72673BC5500C7B19F /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDB62673BC5500C7B19F /* TimerView.swift */; };
 		CE07EDB92674BD3B00C7B19F /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDB82674BD3B00C7B19F /* CategoryRow.swift */; };
 		CE07EDBB2674EE0F00C7B19F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDBA2674EE0F00C7B19F /* SettingsView.swift */; };
@@ -100,6 +101,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		83E7B54826D555A700292B35 /* iMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageHelper.swift; sourceTree = "<group>"; };
 		CE07EDB62673BC5500C7B19F /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		CE07EDB82674BD3B00C7B19F /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		CE07EDBA2674EE0F00C7B19F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				CE58AD862663B60C00B434D2 /* ViewModel.swift */,
 				CE07EDBA2674EE0F00C7B19F /* SettingsView.swift */,
 				CE07EDC02675E78200C7B19F /* iCalenderHelper.swift */,
+				83E7B54826D555A700292B35 /* iMessageHelper.swift */,
 				CE07EDB52673BC4500C7B19F /* TimerSection */,
 				CEDEF8FA2662846E00FF89D0 /* CategorySection */,
 				CEDEF8F92662846700FF89D0 /* EventSection */,
@@ -491,6 +494,7 @@
 				CEDEF8AE2662529500FF89D0 /* MZTimerApp.swift in Sources */,
 				CE07EDBB2674EE0F00C7B19F /* SettingsView.swift in Sources */,
 				CE07EDC12675E78200C7B19F /* iCalenderHelper.swift in Sources */,
+				83E7B54926D555A700292B35 /* iMessageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

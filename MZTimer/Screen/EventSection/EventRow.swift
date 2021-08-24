@@ -17,7 +17,7 @@ struct EventRow: View {
     
     var body: some View {
         NavigationLink(
-            destination: EventEndView(event: event),
+            destination: EventEndView(viewModel: EventEndViewModel(event: event)),
             isActive: $pushEndView,
             label: {
                 VStack {
