@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSCalendarsUsageDescription</key>
-	<string>yo gimmi ya calender info mf</string>
+	<string>To add event to your calender app</string>
 	<key>NSContactsUsageDescription</key>
-	<string>I&apos;m gonna fuck your contacts up yo</string>
+	<string>To add friends to share timer event</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
