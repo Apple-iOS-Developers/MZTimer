@@ -49,14 +49,14 @@ struct ContactEndListView: View {
             }
         }
         .toolbar {
-            Button("추가하기") {
+            Button("add Friend") {
                 showModal.toggle()
             }
         }
         .sheet(isPresented: $showModal) {
             EmbeddedContactPicker()
         }
-        .navigationBarTitle("공유할 친구들")
+        .navigationBarTitle("Sharing Friends")
         
     }
     

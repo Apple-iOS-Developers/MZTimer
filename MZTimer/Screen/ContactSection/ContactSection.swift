@@ -26,7 +26,7 @@ struct ContactSection: View {
                     destination: ContactEndListView(address: $viewModel.contacts),
                     isActive: $pushListEnd,
                     label: {
-                        Text("더보기")
+                        Text("more")
                             .contentShape(Rectangle())
                             .onTapGesture {
                                 pushListEnd.toggle()
