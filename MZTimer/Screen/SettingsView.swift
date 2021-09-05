@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct SettingsView: View {
-
+    
     @State private var sendMessage: Bool = UserDefaults.standard.bool(forKey: "SendMessage")
     @State private var addCalender: Bool = UserDefaults.standard.bool(forKey: "AddCalender")
     @State private var userName: String = UserDefaults.standard.string(forKey: "UserName") ?? ""
+    
+    @State private var showAlert: Bool = false
+    
+    @Binding var showSetting: Bool
 
     var body: some View {
 
@@ -43,8 +47,6 @@ struct SettingsView: View {
             .padding()
             .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
 
-            Spacer().frame(height:20)
-
             VStack(alignment:.leading, spacing:0){
                 Toggle(addCalender ? "Calender adding enabled" : "Calender adding disabled", isOn: $addCalender)
                     .onChange(of: addCalender, perform: { value in
@@ -59,27 +61,50 @@ struct SettingsView: View {
             }
             .padding()
             .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+            
 
             VStack(alignment: .leading, spacing:0 ){
-                
                 Text("User name")
-                TextField("사용자 이름", text: $userName)
+                TextField("Enter your name/nickname (Required)", text: $userName)
                 Text("description").font(.caption).foregroundColor(.yellow)
                 Text("When sharing to friends, message will created by using this name").font(.caption)
             }
+            .padding()
+            .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+            
+            
 
             Spacer()
-
+            Button(action: {
+                if userName.isEmpty || userName == "" {
+                    showAlert.toggle()
+                } else {
+                    UserDefaults.standard.setValue(userName, forKey: "UserName")
+                    showSetting.toggle()
+                }
+            }, label: {
+                Text("Save")
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .frame(width: UIScreen.main.bounds.width-40, height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .background(Color.green)
+                    .cornerRadius(10)
+            })
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Error"), message: Text("please enter your name."), dismissButton: .default(Text("ok")))
+            }
         }
         .preferredColorScheme(.dark)
         .foregroundColor(.white)
         .padding()
+        
 
     }
+    
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(showSetting: .constant(true))
     }
 }

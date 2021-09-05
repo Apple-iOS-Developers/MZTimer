@@ -18,6 +18,7 @@ struct ContentView: View {
     @State var showCategorySheet = false
     @State var isStopPressed = false
     @State var showSetting = false
+    @State var showSettingFullScreen = false
 
     var body: some View {
         NavigationView {
@@ -61,7 +62,7 @@ struct ContentView: View {
         }
         .preferredColorScheme(.dark)
         .onAppear(perform: {
-            _ = iCalenderHelper.shared
+            checkInitialLaunch()
         })
     }
 }
@@ -167,8 +168,11 @@ extension ContentView {
             }, label: {
                 Text("Settings")
             })
+            .fullScreenCover(isPresented: $showSettingFullScreen, content: {
+                SettingsView(showSetting: $showSettingFullScreen)
+            })
             .sheet(isPresented: $showSetting, content: {
-                SettingsView()
+                SettingsView(showSetting: $showSetting)
             })
 
             Spacer()
@@ -180,6 +184,13 @@ extension ContentView {
             Spacer()
         }.padding(.vertical, 30)
         .font(.body)
+    }
+    
+    func checkInitialLaunch() {
+        if UserDefaults.standard.bool(forKey: "initialLaunch") == false || UserDefaults.standard.string(forKey: "UserName") == nil {
+            UserDefaults.standard.setValue(true, forKey: "initialLaunch")
+            showSettingFullScreen.toggle()
+        }
     }
 }
 
