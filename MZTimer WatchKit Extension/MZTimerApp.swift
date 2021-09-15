@@ -12,7 +12,7 @@ struct MZTimerApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                ContentView(viewModel: WatchViewModel())
             }
         }
 

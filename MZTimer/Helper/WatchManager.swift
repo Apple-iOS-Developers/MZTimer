@@ -23,9 +23,17 @@ class WatchManager :NSObject{
     }
 
     func syncDataToWatch() {
+        if watchSession.isWatchAppInstalled {
+            print("[WatchManager] watch app is installed")
+        } else {
+            print("[WatchManager] watch app is NOT installed")
+            return
+        }
+
         print("[WatchManager] activationState \(watchSession.activationState.rawValue)")
         if watchSession.isReachable {
             let sampleData = ["data":"string from iphone"]
+            try? watchSession.updateApplicationContext(sampleData)
             watchSession.sendMessage(sampleData, replyHandler: nil) { error in
                 print("[WatchManager] \(error.localizedDescription)")
             }
@@ -60,5 +68,8 @@ extension WatchManager: WCSessionDelegate {
         print("[WatchManager] received data \(userInfo)")
     }
 
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        print("[WatchManager] received data \(applicationContext)")
+    }
 
 }

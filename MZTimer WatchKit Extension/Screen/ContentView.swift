@@ -10,7 +10,7 @@ import WatchConnectivity
 
 
 struct ContentView: View {
-    @ObservedObject var viewModel = WatchViewModel()
+    @ObservedObject var viewModel: WatchViewModel
    
     var body: some View {
         VStack(alignment:.leading) {
@@ -36,7 +36,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: WatchViewModel())
     }
 }
 
@@ -51,10 +51,9 @@ struct CategoryRow: View {
             destination: TimerView(pushTimer: $pushTimer),
             isActive: $pushTimer,
             label: {
-                
                 HStack(alignment:.bottom) {
-                    Text("📒").font(.largeTitle)
-                    Text("디자인 패턴 공부").font(.body).foregroundColor(Color.textGreen)
+                    Text(category.emoji).font(.largeTitle)
+                    Text(category.title).font(.body).foregroundColor(Color.textGreen)
                 }
                 .frame(
                     width: WKInterfaceDevice.currentResolution == .watch38mm ? 136: 156,
