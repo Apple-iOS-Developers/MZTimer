@@ -71,10 +71,19 @@ struct SettingsView: View {
             }
             .padding()
             .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-            
-            
+
+
+            VStack(alignment: .leading, spacing: 0){
+                Text("Sync data with your watch")
+                Button("Sync!") {
+                    WatchManager.shared.syncDataToWatch()
+                }
+            }
+            .padding()
+            .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
 
             Spacer()
+
             Button(action: {
                 if userName.isEmpty || userName == "" {
                     showAlert.toggle()
@@ -93,6 +102,8 @@ struct SettingsView: View {
             .alert(isPresented: $showAlert) {
                 Alert(title: Text("Error"), message: Text("please enter your name."), dismissButton: .default(Text("ok")))
             }
+
+
         }
         .preferredColorScheme(.dark)
         .foregroundColor(.white)

@@ -52,7 +52,6 @@
 		CEDEF90A2662A05A00FF89D0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF9092662A05A00FF89D0 /* TimerView.swift */; };
 		CEDEF91126633E5D00FF89D0 /* UserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF91026633E5D00FF89D0 /* UserDefaultStorage.swift */; };
 		CEDEF9142663459500FF89D0 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF9132663459500FF89D0 /* WatchManager.swift */; };
-		CEDEF9152663459500FF89D0 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF9132663459500FF89D0 /* WatchManager.swift */; };
 		CEDEF917266348CA00FF89D0 /* WatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF916266348CA00FF89D0 /* WatchViewModel.swift */; };
 		CEDEF918266348CA00FF89D0 /* WatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF916266348CA00FF89D0 /* WatchViewModel.swift */; };
 		CEDEF91A26634E7400FF89D0 /* AddEventModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF91926634E7400FF89D0 /* AddEventModal.swift */; };
@@ -178,6 +177,17 @@
 			path = TimerSection;
 			sourceTree = "<group>";
 		};
+		CE28D4FE26F2371400B6EA04 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CE07EDC02675E78200C7B19F /* iCalenderHelper.swift */,
+				83E7B54826D555A700292B35 /* iMessageHelper.swift */,
+				CEDEF91026633E5D00FF89D0 /* UserDefaultStorage.swift */,
+				CEDEF9132663459500FF89D0 /* WatchManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		CE58AD7A2663516000B434D2 /* ContactSection */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +222,7 @@
 		CEDEF8AC2662529500FF89D0 /* MZTimer */ = {
 			isa = PBXGroup;
 			children = (
+				CE28D4FE26F2371400B6EA04 /* Helper */,
 				CEDEF8F026627C6700FF89D0 /* Screen */,
 				CEDEF8EF26627C5E00FF89D0 /* Extension */,
 				CEDEF8EA26627C3300FF89D0 /* Model */,
@@ -267,7 +278,6 @@
 		CEDEF8EA26627C3300FF89D0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEDEF91026633E5D00FF89D0 /* UserDefaultStorage.swift */,
 				CEDEF8EB26627C4A00FF89D0 /* CategoryModel.swift */,
 				CEDEF8ED26627C5200FF89D0 /* EventModel.swift */,
 				CE58AD7D266351F300B434D2 /* ContactModel.swift */,
@@ -280,7 +290,6 @@
 			children = (
 				CEDEF8F126627C7700FF89D0 /* Extensions.swift */,
 				CEDEF90526629E2200FF89D0 /* Color.swift */,
-				CEDEF9132663459500FF89D0 /* WatchManager.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -291,8 +300,6 @@
 				CEDEF8AF2662529500FF89D0 /* ContentView.swift */,
 				CE58AD862663B60C00B434D2 /* ViewModel.swift */,
 				CE07EDBA2674EE0F00C7B19F /* SettingsView.swift */,
-				CE07EDC02675E78200C7B19F /* iCalenderHelper.swift */,
-				83E7B54826D555A700292B35 /* iMessageHelper.swift */,
 				CE07EDB52673BC4500C7B19F /* TimerSection */,
 				CEDEF8FA2662846E00FF89D0 /* CategorySection */,
 				CEDEF8F92662846700FF89D0 /* EventSection */,
@@ -507,7 +514,6 @@
 				CEDEF8CF2662529A00FF89D0 /* NotificationController.swift in Sources */,
 				CEDEF90226629BE600FF89D0 /* CategoryModel.swift in Sources */,
 				CE58AD832663AB3C00B434D2 /* ContactModel.swift in Sources */,
-				CEDEF9152663459500FF89D0 /* WatchManager.swift in Sources */,
 				CEDEF8CD2662529A00FF89D0 /* ContentView.swift in Sources */,
 				CEDEF8D32662529A00FF89D0 /* ComplicationController.swift in Sources */,
 				CEDEF90326629BE900FF89D0 /* EventModel.swift in Sources */,
