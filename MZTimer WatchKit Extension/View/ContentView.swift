@@ -9,8 +9,9 @@ import SwiftUI
 import WatchConnectivity
 
 struct ContentView: View {
+
     @ObservedObject var viewModel: WatchViewModel
-   
+
     var body: some View {
         VStack(alignment:.leading) {
             Text("할일")
@@ -27,12 +28,7 @@ struct ContentView: View {
                     }
                 }
             }
-            
-            
         }
-        .alert(isPresented: viewModel.$showReceivedMessageAlert, content: {
-            Alert(title: Text("message received from iPhone"))
-        })
     }
 }
 
@@ -49,26 +45,26 @@ struct CategoryRow: View {
         self.category = category
     }
     var body: some View {
-        NavigationLink(
-            destination: TimerView(pushTimer: $pushTimer),
-            isActive: $pushTimer,
-            label: {
-                HStack(alignment:.bottom) {
-                    Text(category.emoji).font(.largeTitle)
-                    Text(category.title).font(.body).foregroundColor(Color.textGreen)
-                }
-                .frame(
-                    width: WKInterfaceDevice.currentResolution == .watch38mm ? 136: 156,
-                    alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/
-                )
-//                .background(Color.rowBackground)
-                .cornerRadius(10)
-                .padding(.horizontal,10)
-                .onTapGesture {
-                    pushTimer.toggle()
-                }
-            })
-    }
+            NavigationLink(
+                destination: TimerView(pushTimer: $pushTimer, timerViewModel: WatchTimerViewModel(currentCategory: category)),
+                isActive: $pushTimer,
+                label: {
+                    HStack(alignment:.bottom, spacing: 5) {
+                        Text(category.emoji).font(.largeTitle)
+                        Text(category.title).font(.body).foregroundColor(Color.textGreen)
+                        Spacer()
+                    }
+                    .frame(
+                        width: WKInterfaceDevice.currentResolution == .watch38mm ? 136: 156,
+                        alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/
+                    )
+                    .cornerRadius(10)
+                    .padding(.horizontal,10)
+                    .onTapGesture {
+                        pushTimer.toggle()
+                    }
+                })
+        }
 }
 
 enum WatchType {

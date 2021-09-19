@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		83E7B54926D555A700292B35 /* iMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7B54826D555A700292B35 /* iMessageHelper.swift */; };
-		CE07EDB72673BC5500C7B19F /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDB62673BC5500C7B19F /* TimerView.swift */; };
 		CE07EDB92674BD3B00C7B19F /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDB82674BD3B00C7B19F /* CategoryRow.swift */; };
 		CE07EDBB2674EE0F00C7B19F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDBA2674EE0F00C7B19F /* SettingsView.swift */; };
 		CE07EDC12675E78200C7B19F /* iCalenderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDC02675E78200C7B19F /* iCalenderHelper.swift */; };
 		CE07EDC42675F82700C7B19F /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDC32675F82700C7B19F /* TimerViewModel.swift */; };
 		CE07EDC62675F93600C7B19F /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDC52675F93600C7B19F /* EventRow.swift */; };
+		CE54F16726F7734300FE4B84 /* WatchUserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54F16626F7734300FE4B84 /* WatchUserDefaultStorage.swift */; };
+		CE54F16B26F7770C00FE4B84 /* WatchTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54F16A26F7770C00FE4B84 /* WatchTimerViewModel.swift */; };
+		CE54F16E26F77AEE00FE4B84 /* WatchiMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54F16D26F77AEE00FE4B84 /* WatchiMessageHelper.swift */; };
 		CE58AD7C2663518900B434D2 /* ContactSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD7B2663518900B434D2 /* ContactSection.swift */; };
 		CE58AD7E266351F300B434D2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD7D266351F300B434D2 /* Contact.swift */; };
 		CE58AD80266353C600B434D2 /* ContactEndListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD7F266353C600B434D2 /* ContactEndListView.swift */; };
@@ -52,7 +54,6 @@
 		CEDEF90A2662A05A00FF89D0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF9092662A05A00FF89D0 /* TimerView.swift */; };
 		CEDEF91126633E5D00FF89D0 /* UserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF91026633E5D00FF89D0 /* UserDefaultStorage.swift */; };
 		CEDEF9142663459500FF89D0 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF9132663459500FF89D0 /* WatchManager.swift */; };
-		CEDEF917266348CA00FF89D0 /* WatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF916266348CA00FF89D0 /* WatchViewModel.swift */; };
 		CEDEF918266348CA00FF89D0 /* WatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF916266348CA00FF89D0 /* WatchViewModel.swift */; };
 		CEDEF91A26634E7400FF89D0 /* AddEventModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF91926634E7400FF89D0 /* AddEventModal.swift */; };
 /* End PBXBuildFile section */
@@ -101,12 +102,14 @@
 
 /* Begin PBXFileReference section */
 		83E7B54826D555A700292B35 /* iMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageHelper.swift; sourceTree = "<group>"; };
-		CE07EDB62673BC5500C7B19F /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		CE07EDB82674BD3B00C7B19F /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		CE07EDBA2674EE0F00C7B19F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CE07EDC02675E78200C7B19F /* iCalenderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCalenderHelper.swift; sourceTree = "<group>"; };
 		CE07EDC32675F82700C7B19F /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		CE07EDC52675F93600C7B19F /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
+		CE54F16626F7734300FE4B84 /* WatchUserDefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchUserDefaultStorage.swift; sourceTree = "<group>"; };
+		CE54F16A26F7770C00FE4B84 /* WatchTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTimerViewModel.swift; sourceTree = "<group>"; };
+		CE54F16D26F77AEE00FE4B84 /* WatchiMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchiMessageHelper.swift; sourceTree = "<group>"; };
 		CE58AD7B2663518900B434D2 /* ContactSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSection.swift; sourceTree = "<group>"; };
 		CE58AD7D266351F300B434D2 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		CE58AD7F266353C600B434D2 /* ContactEndListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEndListView.swift; sourceTree = "<group>"; };
@@ -171,7 +174,6 @@
 		CE07EDB52673BC4500C7B19F /* TimerSection */ = {
 			isa = PBXGroup;
 			children = (
-				CE07EDB62673BC5500C7B19F /* TimerView.swift */,
 				CE07EDC32675F82700C7B19F /* TimerViewModel.swift */,
 			);
 			path = TimerSection;
@@ -184,6 +186,15 @@
 				83E7B54826D555A700292B35 /* iMessageHelper.swift */,
 				CEDEF91026633E5D00FF89D0 /* UserDefaultStorage.swift */,
 				CEDEF9132663459500FF89D0 /* WatchManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		CE54F16C26F7771100FE4B84 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CE54F16626F7734300FE4B84 /* WatchUserDefaultStorage.swift */,
+				CE54F16D26F77AEE00FE4B84 /* WatchiMessageHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -254,7 +265,8 @@
 		CEDEF8C92662529A00FF89D0 /* MZTimer WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CEDEF9082662A05000FF89D0 /* Screen */,
+				CE54F16C26F7771100FE4B84 /* Helper */,
+				CEDEF9082662A05000FF89D0 /* View */,
 				CEDEF8CA2662529A00FF89D0 /* MZTimerApp.swift */,
 				CEDEF8CE2662529A00FF89D0 /* NotificationController.swift */,
 				CEDEF8D02662529A00FF89D0 /* NotificationView.swift */,
@@ -332,14 +344,15 @@
 			path = CategorySection;
 			sourceTree = "<group>";
 		};
-		CEDEF9082662A05000FF89D0 /* Screen */ = {
+		CEDEF9082662A05000FF89D0 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				CEDEF8CC2662529A00FF89D0 /* ContentView.swift */,
-				CEDEF9092662A05A00FF89D0 /* TimerView.swift */,
 				CEDEF916266348CA00FF89D0 /* WatchViewModel.swift */,
+				CEDEF9092662A05A00FF89D0 /* TimerView.swift */,
+				CE54F16A26F7770C00FE4B84 /* WatchTimerViewModel.swift */,
 			);
-			path = Screen;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,11 +489,9 @@
 				CEDEF8FE2662848500FF89D0 /* EventSection.swift in Sources */,
 				CE58AD7C2663518900B434D2 /* ContactSection.swift in Sources */,
 				CEDEF901266289FF00FF89D0 /* AddCategoryModal.swift in Sources */,
-				CEDEF917266348CA00FF89D0 /* WatchViewModel.swift in Sources */,
 				CEDEF9142663459500FF89D0 /* WatchManager.swift in Sources */,
 				CE58AD872663B60C00B434D2 /* ViewModel.swift in Sources */,
 				CE07EDC62675F93600C7B19F /* EventRow.swift in Sources */,
-				CE07EDB72673BC5500C7B19F /* TimerView.swift in Sources */,
 				CEDEF8E926626C4B00FF89D0 /* CategoryEndView.swift in Sources */,
 				CE58AD82266355DF00B434D2 /* ContactBrowserView.swift in Sources */,
 				CE58AD7E266351F300B434D2 /* Contact.swift in Sources */,
@@ -509,6 +520,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE54F16B26F7770C00FE4B84 /* WatchTimerViewModel.swift in Sources */,
+				CE54F16E26F77AEE00FE4B84 /* WatchiMessageHelper.swift in Sources */,
+				CE54F16726F7734300FE4B84 /* WatchUserDefaultStorage.swift in Sources */,
 				CEDEF90A2662A05A00FF89D0 /* TimerView.swift in Sources */,
 				CEDEF918266348CA00FF89D0 /* WatchViewModel.swift in Sources */,
 				CEDEF8CF2662529A00FF89D0 /* NotificationController.swift in Sources */,
