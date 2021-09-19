@@ -39,11 +39,15 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct CategoryRow: View {
-    let category: Category
-    @State var pushTimer: Bool = false
+
+    private let category: Category
+
+    @State private var pushTimer: Bool = false
+
     init(category: Category) {
         self.category = category
     }
+
     var body: some View {
             NavigationLink(
                 destination: TimerView(pushTimer: $pushTimer, timerViewModel: WatchTimerViewModel(currentCategory: category)),
@@ -64,6 +68,7 @@ struct CategoryRow: View {
                         pushTimer.toggle()
                     }
                 })
+
         }
 }
 

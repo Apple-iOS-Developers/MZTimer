@@ -673,7 +673,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MZTimer WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 9Y5NYS23KM;
 				ENABLE_PREVIEWS = YES;
@@ -698,7 +698,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MZTimer WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 9Y5NYS23KM;
 				ENABLE_PREVIEWS = YES;

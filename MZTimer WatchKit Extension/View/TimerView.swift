@@ -13,6 +13,8 @@ struct TimerView: View {
 
     @ObservedObject var timerViewModel: WatchTimerViewModel
     @State private var isStopPressed: Bool = false
+    @State private var showTimerResultView: Bool = false
+    @State private var savedEvent: Event?
     
     var body: some View {
         VStack{
@@ -27,34 +29,41 @@ struct TimerView: View {
             }
             Spacer()
             HStack{
-                Text("Stop")
-                    .bold()
-                    .frame(width: 80, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(.red)
-                    .background(Color.rowBackground)
-                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                    .onTapGesture {
-                        isStopPressed = true
-                    }
-                    .actionSheet(isPresented: $isStopPressed, content: {
-                        ActionSheet(
-                            title: Text("End event"),
-                            message: Text("Confirm end current event"),
-                            buttons: [
-                                ActionSheet.Button.default(Text("Confirm"), action: {
-                                    DispatchQueue.main.async {
-                                        timerViewModel.stop {
-                                            pushTimer.toggle()
-                                        }
-                                    }
-                                }),
-                                .cancel({
-                                    isStopPressed = false
-                                })
-                            ]
-                        )
+
+                NavigationLink(
+                    destination: TimerResultView(event: savedEvent ?? Event(emoji: "", title: "", time: 0, endDate: Date()), showTimerResultView: $showTimerResultView),
+                    isActive: $showTimerResultView,
+                    label: {
+                        Text("Stop")
+                            .bold()
+                            .frame(width: 80, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(.red)
+                            .background(Color.rowBackground)
+                            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                            .onTapGesture {
+                                isStopPressed = true
+                            }
+                            .actionSheet(isPresented: $isStopPressed, content: {
+                                ActionSheet(
+                                    title: Text("End event"),
+                                    message: Text("Confirm end current event"),
+                                    buttons: [
+                                        ActionSheet.Button.default(Text("Confirm"), action: {
+                                            DispatchQueue.main.async {
+                                                timerViewModel.stop { event in
+                                                    savedEvent = event
+                                                    showTimerResultView = true
+                                                }
+                                            }
+                                        }) ,
+                                        .cancel({
+                                            isStopPressed = false
+                                        })
+                                    ]
+                                )
+                            })
                     })
-                
+                    .buttonStyle(PlainButtonStyle())
                 
                 Text(timerViewModel.isPaused ?  "Resume" : "Paused")
                     .bold()
@@ -69,7 +78,14 @@ struct TimerView: View {
                         }
                     }
             }
-        }.navigationBarBackButtonHidden(true)
+        }
+        .onAppear(perform: {
+            //pop to rootView 할려면 isDetailLink가 있어야 하는데 watchOS에서는 적용이 안되서 savedEvent도 있을때 한번더 pop
+            if showTimerResultView == false && savedEvent != nil {
+                pushTimer = false
+            }
+        })
+        .navigationBarBackButtonHidden(true)
         
     }
 }

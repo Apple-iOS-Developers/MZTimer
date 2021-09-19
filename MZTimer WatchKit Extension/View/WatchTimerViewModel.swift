@@ -84,18 +84,18 @@ class WatchTimerViewModel: NSObject, ObservableObject {
         }
     }
 
-    public func stop(completion: @escaping () -> Void) {
+    public func stop(completion: @escaping (Event) -> Void) {
         if let timer = mTimer {
             if(timer.isValid){
                 timer.invalidate()
             }
         }
-        saveEvent()
+        let savedEvent = saveEvent()
         passedTimeSeconds = 0
         calculateTime()
         endTimer()
         startDate = nil
-        completion()
+        completion(savedEvent)
     }
 
     public func getCurrentCategory() -> Category {
@@ -118,9 +118,10 @@ class WatchTimerViewModel: NSObject, ObservableObject {
         hours = String(format: "%02i", (passedTimeSeconds / 3600)  )
     }
 
-    private func saveEvent() {
+    private func saveEvent() -> Event {
         let event = Event(emoji: currentCategory.emoji, title: currentCategory.title, time: passedTimeSeconds, endDate: Date())
         WatchUserDefaultStorage.shared.saveEvent(event: event)
+        return event
     }
 
     private func addTimer() {
