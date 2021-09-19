@@ -8,6 +8,13 @@
 import Foundation
 import WatchConnectivity
 
+enum WatchConnectivityResult: String {
+    case isNotInstalled = "Companion watch app is not installed"
+    case isNotReachable = "Companion watch app is not running"
+    case sendMessageError = "Unknown watch app error"
+    case success = "success"
+}
+
 class WatchManager :NSObject{
 
     static let shared: WatchManager = WatchManager()
@@ -22,26 +29,29 @@ class WatchManager :NSObject{
         }
     }
 
-    func syncDataToWatch() {
-        if watchSession.isWatchAppInstalled {
-            print("[WatchManager] watch app is installed")
-        } else {
-            print("[WatchManager] watch app is NOT installed")
+    func isReachable() -> Bool {
+        return watchSession.isReachable
+    }
+
+    func syncDataToWatch(completion: @escaping (WatchConnectivityResult) -> Void) {
+        if !watchSession.isWatchAppInstalled {
+            completion(.isNotInstalled)
             return
         }
 
-        print("[WatchManager] activationState \(watchSession.activationState.rawValue)")
         if watchSession.isReachable {
             let sampleData = ["data":"string from iphone"]
             try? watchSession.updateApplicationContext(sampleData)
             watchSession.sendMessage(sampleData, replyHandler: nil) { error in
+                completion(.sendMessageError)
                 print("[WatchManager] \(error.localizedDescription)")
             }
         } else {
-            print("[WatchManager] inValid Session!")
+            completion(.isNotReachable)
+            return
         }
+        completion(.success)
     }
-
 }
 extension WatchManager: WCSessionDelegate {
 

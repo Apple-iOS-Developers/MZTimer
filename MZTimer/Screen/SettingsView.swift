@@ -14,6 +14,8 @@ struct SettingsView: View {
     @State private var userName: String = UserDefaults.standard.string(forKey: "UserName") ?? ""
     
     @State private var showAlert: Bool = false
+    @State private var showWatchConnectivityResultAlarm = false
+    @State private var watchConnectivityResult: WatchConnectivityResult = WatchConnectivityResult.isNotReachable
     
     @Binding var showSetting: Bool
 
@@ -76,9 +78,15 @@ struct SettingsView: View {
             VStack(alignment: .leading, spacing: 0){
                 Text("Sync data with your watch")
                 Button("Sync!") {
-                    WatchManager.shared.syncDataToWatch()
+                    WatchManager.shared.syncDataToWatch { watchConnectivityResult in
+                        showWatchConnectivityResultAlarm = true
+                        self.watchConnectivityResult = watchConnectivityResult
+                    }
                 }
             }
+            .alert(isPresented: $showWatchConnectivityResultAlarm, content: {
+                Alert(title: Text(watchConnectivityResult.rawValue))
+            })
             .padding()
             .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
 
