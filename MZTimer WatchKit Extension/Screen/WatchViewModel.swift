@@ -8,12 +8,15 @@
 import Foundation
 import WatchConnectivity
 import SwiftUI
+import Combine
 
 class WatchViewModel: NSObject, ObservableObject {
 
     var session: WCSession = WCSession.default
 
-    @Published var category: [Category] = [Category(emoji: "🟣", title: "oijwaef")]
+    @Published var categories: [Category] = [Category(emoji: "🟣", title: "oijwaef")]
+
+    @State var showReceivedMessageAlert: Bool = false
 
     override init() {
         super.init()
@@ -32,7 +35,6 @@ extension WatchViewModel: WCSessionDelegate {
         if activationState == WCSessionActivationState.activated {
             NSLog("Activated")
             if(session.isReachable){
-
                 do {
                     try session.updateApplicationContext(
                         ["WatchRequestKey" : "updateData"]
@@ -65,16 +67,23 @@ extension WatchViewModel: WCSessionDelegate {
     #endif
 
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        category.append(Category(emoji: "🟣", title: "testfrom"))
+        categories.append(Category(emoji: "🟣", title: "testfrom"))
     }
 
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
         print("[WatchViewModel] userInfo \(userInfo)")
-        category.append(Category(emoji: "🟣", title: "testfrom"))
+        categories.append(Category(emoji: "🟣", title: "testfrom"))
     }
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         print("[WatchViewModel] didReceiveMessage \(message)")
-        category.append(Category(emoji: "🟣", title: "testfrom"))
+        showReceivedMessageAlert = true
+
+        let decoder = JSONDecoder()
+
+        let categories = try? decoder.decode([Category].self, from: message["categories"] as! Data)
+//        let events = decoder.decode([Event].self, from: message["events"])
+//        let contacts = decoder.decode([Contact].self, from: message["contacts"])
+        self.categories = categories ?? []
     }
 }

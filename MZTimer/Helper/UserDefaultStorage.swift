@@ -22,7 +22,7 @@ class UserDefaultStorage {
         }
         
         if contact.count == 0 {
-            contact.append(ContactModel(name: "예시 연락처 입니다.", phoneNumber: "010-XXXX-XXXX", memo: "예시 친구"))
+            contact.append(Contact(name: "예시 연락처 입니다.", phoneNumber: "010-XXXX-XXXX", memo: "예시 친구"))
         }
     }
     
@@ -50,11 +50,11 @@ class UserDefaultStorage {
             UserDefaults.standard.set(try? PropertyListEncoder().encode(newValue), forKey: "event")
         }
     }
-    private var contact: [ContactModel] {
+    private var contact: [Contact] {
         get {
-            var contact: [ContactModel]?
+            var contact: [Contact]?
             if let data = UserDefaults.standard.value(forKey: "contact") as? Data {
-                contact = try? PropertyListDecoder().decode([ContactModel].self, from: data)
+                contact = try? PropertyListDecoder().decode([Contact].self, from: data)
             }
             return contact ?? []
         }
@@ -118,14 +118,14 @@ class UserDefaultStorage {
     }
 
     
-    func saveContact(contact: ContactModel) {
+    func saveContact(contact: Contact) {
         self.contact.append(contact)
         updateContact()
     }
-    func loadContact() -> [ContactModel]{
+    func loadContact() -> [Contact]{
         return contact
     }
-    func removeContact(contact: ContactModel) {
+    func removeContact(contact: Contact) {
         if let index = self.contact.firstIndex(of: contact) {
             self.contact.remove(at: index)
             updateContact()

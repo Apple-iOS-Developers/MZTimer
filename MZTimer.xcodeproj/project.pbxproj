@@ -15,10 +15,10 @@
 		CE07EDC42675F82700C7B19F /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDC32675F82700C7B19F /* TimerViewModel.swift */; };
 		CE07EDC62675F93600C7B19F /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDC52675F93600C7B19F /* EventRow.swift */; };
 		CE58AD7C2663518900B434D2 /* ContactSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD7B2663518900B434D2 /* ContactSection.swift */; };
-		CE58AD7E266351F300B434D2 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD7D266351F300B434D2 /* ContactModel.swift */; };
+		CE58AD7E266351F300B434D2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD7D266351F300B434D2 /* Contact.swift */; };
 		CE58AD80266353C600B434D2 /* ContactEndListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD7F266353C600B434D2 /* ContactEndListView.swift */; };
 		CE58AD82266355DF00B434D2 /* ContactBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD81266355DF00B434D2 /* ContactBrowserView.swift */; };
-		CE58AD832663AB3C00B434D2 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD7D266351F300B434D2 /* ContactModel.swift */; };
+		CE58AD832663AB3C00B434D2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD7D266351F300B434D2 /* Contact.swift */; };
 		CE58AD852663ACE600B434D2 /* ContactEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD842663ACE600B434D2 /* ContactEndView.swift */; };
 		CE58AD872663B60C00B434D2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD862663B60C00B434D2 /* ViewModel.swift */; };
 		CEDEF8AE2662529500FF89D0 /* MZTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF8AD2662529500FF89D0 /* MZTimerApp.swift */; };
@@ -108,7 +108,7 @@
 		CE07EDC32675F82700C7B19F /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		CE07EDC52675F93600C7B19F /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
 		CE58AD7B2663518900B434D2 /* ContactSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSection.swift; sourceTree = "<group>"; };
-		CE58AD7D266351F300B434D2 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		CE58AD7D266351F300B434D2 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		CE58AD7F266353C600B434D2 /* ContactEndListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEndListView.swift; sourceTree = "<group>"; };
 		CE58AD81266355DF00B434D2 /* ContactBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBrowserView.swift; sourceTree = "<group>"; };
 		CE58AD842663ACE600B434D2 /* ContactEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEndView.swift; sourceTree = "<group>"; };
@@ -280,7 +280,7 @@
 			children = (
 				CEDEF8EB26627C4A00FF89D0 /* CategoryModel.swift */,
 				CEDEF8ED26627C5200FF89D0 /* EventModel.swift */,
-				CE58AD7D266351F300B434D2 /* ContactModel.swift */,
+				CE58AD7D266351F300B434D2 /* Contact.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -483,7 +483,7 @@
 				CE07EDB72673BC5500C7B19F /* TimerView.swift in Sources */,
 				CEDEF8E926626C4B00FF89D0 /* CategoryEndView.swift in Sources */,
 				CE58AD82266355DF00B434D2 /* ContactBrowserView.swift in Sources */,
-				CE58AD7E266351F300B434D2 /* ContactModel.swift in Sources */,
+				CE58AD7E266351F300B434D2 /* Contact.swift in Sources */,
 				CEDEF8F62662824B00FF89D0 /* EventListEndView.swift in Sources */,
 				CE58AD80266353C600B434D2 /* ContactEndListView.swift in Sources */,
 				CE07EDB92674BD3B00C7B19F /* CategoryRow.swift in Sources */,
@@ -513,7 +513,7 @@
 				CEDEF918266348CA00FF89D0 /* WatchViewModel.swift in Sources */,
 				CEDEF8CF2662529A00FF89D0 /* NotificationController.swift in Sources */,
 				CEDEF90226629BE600FF89D0 /* CategoryModel.swift in Sources */,
-				CE58AD832663AB3C00B434D2 /* ContactModel.swift in Sources */,
+				CE58AD832663AB3C00B434D2 /* Contact.swift in Sources */,
 				CEDEF8CD2662529A00FF89D0 /* ContentView.swift in Sources */,
 				CEDEF8D32662529A00FF89D0 /* ComplicationController.swift in Sources */,
 				CEDEF90326629BE900FF89D0 /* EventModel.swift in Sources */,

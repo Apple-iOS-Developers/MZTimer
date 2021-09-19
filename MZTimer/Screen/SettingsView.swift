@@ -65,7 +65,7 @@ struct SettingsView: View {
             .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
             
 
-            VStack(alignment: .leading, spacing:0 ){
+            VStack(alignment: .leading, spacing: 0 ){
                 Text("User name")
                 TextField("Enter your name/nickname (Required)", text: $userName)
                 Text("description").font(.caption).foregroundColor(.yellow)
@@ -76,13 +76,24 @@ struct SettingsView: View {
 
 
             VStack(alignment: .leading, spacing: 0){
-                Text("Sync data with your watch")
-                Button("Sync!") {
-                    WatchManager.shared.syncDataToWatch { watchConnectivityResult in
-                        showWatchConnectivityResultAlarm = true
-                        self.watchConnectivityResult = watchConnectivityResult
-                    }
+                HStack {
+                    Text("Sync data with your watch")
+                    Spacer()
+                    Button(action: {
+                        WatchManager.shared.syncDataToWatch { watchConnectivityResult in
+                            showWatchConnectivityResultAlarm = true
+                            self.watchConnectivityResult = watchConnectivityResult
+                        }
+                    }, label: {
+                        Text("Sync")
+                            .foregroundColor(.white)
+                            .frame(width: 60, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .background(Color.green)
+                            .cornerRadius(3)
+                    })
                 }
+                Text("description").font(.caption).foregroundColor(.yellow)
+                Text("Open companion watch app and press sync button").font(.caption)
             }
             .alert(isPresented: $showWatchConnectivityResultAlarm, content: {
                 Alert(title: Text(watchConnectivityResult.rawValue))
@@ -91,6 +102,7 @@ struct SettingsView: View {
             .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
 
             Spacer()
+
 
             Button(action: {
                 if userName.isEmpty || userName == "" {

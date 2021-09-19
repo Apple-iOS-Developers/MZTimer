@@ -12,7 +12,7 @@ struct ContactEndListView: View {
     
     let flexibleLayout = [GridItem(.flexible()), GridItem(.flexible())]
 
-    @Binding var address: [ContactModel]
+    @Binding var address: [Contact]
     @State var showModal: Bool = false
     
     let pub = NotificationCenter.default.publisher(for: NSNotification.ContactSelected)
@@ -34,7 +34,7 @@ struct ContactEndListView: View {
                 if let userInfo = obj.userInfo, let info = userInfo["contact"] {
                     let contact = info as! CNContact
                     let MobNumVar = (contact.phoneNumbers[0].value ).value(forKey: "digits") as! String
-                    let newContact = ContactModel(name: contact.givenName, phoneNumber: MobNumVar, memo: contact.note)
+                    let newContact = Contact(name: contact.givenName, phoneNumber: MobNumVar, memo: contact.note)
                     address.append(newContact)
                     UserDefaultStorage.shared.saveContact(contact: newContact)
                     showModal.toggle()

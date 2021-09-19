@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ContactModel: Hashable, Codable {
+struct Contact: Hashable, Codable {
     let uuid : UUID
     let name : String
     let phoneNumber: String

@@ -12,7 +12,7 @@ class ViewModel: NSObject, ObservableObject {
 
     @Published var categories: [Category] = UserDefaultStorage.shared.loadCategory()
     @Published var events: [Event] =  UserDefaultStorage.shared.loadEvent()
-    @Published var contacts: [ContactModel] = UserDefaultStorage.shared.loadContact()
+    @Published var contacts: [Contact] = UserDefaultStorage.shared.loadContact()
 
     @Published var currentObject: String = "There are currently no events"
     

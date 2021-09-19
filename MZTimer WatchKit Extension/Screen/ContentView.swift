@@ -8,7 +8,6 @@
 import SwiftUI
 import WatchConnectivity
 
-
 struct ContentView: View {
     @ObservedObject var viewModel: WatchViewModel
    
@@ -23,7 +22,7 @@ struct ContentView: View {
             
             ScrollView{
                 LazyVStack(alignment:.leading, spacing:10) {
-                    ForEach(viewModel.category, id: \.self) {
+                    ForEach(viewModel.categories, id: \.self) {
                         CategoryRow(category: $0)
                     }
                 }
@@ -31,6 +30,9 @@ struct ContentView: View {
             
             
         }
+        .alert(isPresented: viewModel.$showReceivedMessageAlert, content: {
+            Alert(title: Text("message received from iPhone"))
+        })
     }
 }
 

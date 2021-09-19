@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContactEndView: View {
     
-    let contact: ContactModel
+    let contact: Contact
     
-    init(contact: ContactModel){
+    init(contact: Contact){
         self.contact = contact
     }
     
@@ -26,6 +26,6 @@ struct ContactEndView: View {
 
 struct ContactEndView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactEndView(contact: ContactModel(name: "", phoneNumber: "", memo: ""))
+        ContactEndView(contact: Contact(name: "", phoneNumber: "", memo: ""))
     }
 }

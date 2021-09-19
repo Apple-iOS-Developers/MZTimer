@@ -58,9 +58,9 @@ struct PhoneBookSection_Previews: PreviewProvider {
 struct PhoneBookRow: View {
     @State var pushEndView: Bool = false
     @State var longPressed: Bool = false
-    let item : ContactModel
+    let item : Contact
     
-    init(item: ContactModel){
+    init(item: Contact){
         self.item = item
     }
     var body: some View {
@@ -96,7 +96,7 @@ struct PhoneBookRow: View {
             })
     }
     
-    private func deleteContact(contact: ContactModel) {
+    private func deleteContact(contact: Contact) {
         UserDefaultStorage.shared.removeContact(contact: contact)
     }
 }

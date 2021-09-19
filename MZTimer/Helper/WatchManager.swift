@@ -13,6 +13,7 @@ enum WatchConnectivityResult: String {
     case isNotReachable = "Companion watch app is not running"
     case sendMessageError = "Unknown watch app error"
     case success = "success"
+    case jsonEncodingError = "JSON encoding error"
 }
 
 class WatchManager :NSObject{
@@ -29,7 +30,7 @@ class WatchManager :NSObject{
         }
     }
 
-    func isReachable() -> Bool {
+    private func isReachable() -> Bool {
         return watchSession.isReachable
     }
 
@@ -40,11 +41,21 @@ class WatchManager :NSObject{
         }
 
         if watchSession.isReachable {
-            let sampleData = ["data":"string from iphone"]
-            try? watchSession.updateApplicationContext(sampleData)
-            watchSession.sendMessage(sampleData, replyHandler: nil) { error in
-                completion(.sendMessageError)
-                print("[WatchManager] \(error.localizedDescription)")
+
+            do {
+                let encoder = JSONEncoder()
+                let categories = try encoder.encode(UserDefaultStorage.shared.loadCategory())
+                let events = try encoder.encode(UserDefaultStorage.shared.loadEvent())
+                let contacts = try encoder.encode(UserDefaultStorage.shared.loadContact())
+                let sendingData: [String : Any] = ["categories": categories, "events": events, "contacts": contacts]
+
+                watchSession.sendMessage(sendingData, replyHandler: nil) { error in
+                    completion(.sendMessageError)
+                    print("[WatchManager] \(error.localizedDescription)")
+                }
+            } catch {
+                completion(.jsonEncodingError)
+                return
             }
         } else {
             completion(.isNotReachable)
@@ -56,7 +67,7 @@ class WatchManager :NSObject{
 extension WatchManager: WCSessionDelegate {
 
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("[WatchManager] activationDidComplete \(error?.localizedDescription)")
+        print("[WatchManager] activationDidComplete \(error?.localizedDescription ?? "")")
 //        sendParamsToWatch(dict: ["category" : UserDefaultStorage.shared.loadCategory()])
     }
 
