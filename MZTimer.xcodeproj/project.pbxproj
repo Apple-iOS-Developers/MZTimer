@@ -16,6 +16,7 @@
 		CE54F16726F7734300FE4B84 /* WatchUserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54F16626F7734300FE4B84 /* WatchUserDefaultStorage.swift */; };
 		CE54F16B26F7770C00FE4B84 /* WatchTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54F16A26F7770C00FE4B84 /* WatchTimerViewModel.swift */; };
 		CE54F16E26F77AEE00FE4B84 /* WatchiMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54F16D26F77AEE00FE4B84 /* WatchiMessageHelper.swift */; };
+		CE54F17026F785DB00FE4B84 /* TimerResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54F16F26F785DB00FE4B84 /* TimerResultView.swift */; };
 		CE58AD7C2663518900B434D2 /* ContactSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD7B2663518900B434D2 /* ContactSection.swift */; };
 		CE58AD7E266351F300B434D2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD7D266351F300B434D2 /* Contact.swift */; };
 		CE58AD80266353C600B434D2 /* ContactEndListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AD7F266353C600B434D2 /* ContactEndListView.swift */; };
@@ -110,6 +111,7 @@
 		CE54F16626F7734300FE4B84 /* WatchUserDefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchUserDefaultStorage.swift; sourceTree = "<group>"; };
 		CE54F16A26F7770C00FE4B84 /* WatchTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTimerViewModel.swift; sourceTree = "<group>"; };
 		CE54F16D26F77AEE00FE4B84 /* WatchiMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchiMessageHelper.swift; sourceTree = "<group>"; };
+		CE54F16F26F785DB00FE4B84 /* TimerResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerResultView.swift; sourceTree = "<group>"; };
 		CE58AD7B2663518900B434D2 /* ContactSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSection.swift; sourceTree = "<group>"; };
 		CE58AD7D266351F300B434D2 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		CE58AD7F266353C600B434D2 /* ContactEndListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEndListView.swift; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 				CEDEF916266348CA00FF89D0 /* WatchViewModel.swift */,
 				CEDEF9092662A05A00FF89D0 /* TimerView.swift */,
 				CE54F16A26F7770C00FE4B84 /* WatchTimerViewModel.swift */,
+				CE54F16F26F785DB00FE4B84 /* TimerResultView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				CE58AD832663AB3C00B434D2 /* Contact.swift in Sources */,
 				CEDEF8CD2662529A00FF89D0 /* ContentView.swift in Sources */,
 				CEDEF8D32662529A00FF89D0 /* ComplicationController.swift in Sources */,
+				CE54F17026F785DB00FE4B84 /* TimerResultView.swift in Sources */,
 				CEDEF90326629BE900FF89D0 /* EventModel.swift in Sources */,
 				CEDEF90726629E2600FF89D0 /* Color.swift in Sources */,
 				CEDEF8CB2662529A00FF89D0 /* MZTimerApp.swift in Sources */,

@@ -14,7 +14,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack(alignment:.leading) {
-            Text("할일")
+            Text("Category")
                 .bold()
                 .padding(.horizontal,10)
                 .foregroundColor(Color.rowTitle)
