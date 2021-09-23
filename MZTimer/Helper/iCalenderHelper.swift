@@ -79,4 +79,12 @@ struct iCalenderEvent {
         self.startDate = startDate
         self.endDate = startDate.addingTimeInterval(TimeInterval(time))
     }
+    
+    init(event: Event, note: String) {
+        self.title = "\(event.emoji) \(event.title)"
+        self.note = note
+        self.time = event.time
+        self.startDate = event.startDate
+        self.endDate = startDate.addingTimeInterval(TimeInterval(time))
+    }
 }

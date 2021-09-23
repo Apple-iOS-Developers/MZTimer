@@ -27,14 +27,31 @@ struct TimerResultView: View {
                 
                 Spacer()
 
-                Text("total time").font(.body).foregroundColor(Color.textGreen).underline()
+                Text("total time")
+                    .font(.body)
+                    .foregroundColor(Color.textGreen)
+                    .underline()
+                
                 Text("\(event.time.convertTimeToString())")
+                    .font(.footnote)
 
-                Text("start date").font(.body).foregroundColor(Color.textGreen).underline()
-                Text("\(event.startDate.dateWithTimeString())")
+                Text("start date")
+                    .font(.body)
+                    .foregroundColor(Color.textGreen)
+                    .underline()
+         
+                
+                Text("\(event.startDate.dateWithTimeSecondsString())")
+                    .font(.footnote)
 
-                Text("end date").font(.body).foregroundColor(Color.textGreen).underline()
-                Text("\(event.endDate.dateWithTimeString())")
+                Text("end date")
+                    .font(.body)
+                    .foregroundColor(Color.textGreen)
+                    .underline()
+                
+                Text("\(event.endDate.dateWithTimeSecondsString())")
+                    .font(.footnote)
+                
 
             
             }
@@ -42,15 +59,20 @@ struct TimerResultView: View {
                 Button(action: {
                     showTimerResultView = false
                 }, label: {
-                    Text("Done").font(.caption).foregroundColor(Color.textGreen)
+                    Text("Done")
+                        .font(.caption)
+                        .foregroundColor(Color.textGreen)
                 })
                 
                 Button(action: {
-                    viewModel.sendEventDataToPhone(event: Event(emoji: "", title: "", time: 0, endDate: Date())) { result in
+                    viewModel
+                        .sendEventDataToPhone(event: Event(emoji: "", title: "", time: 0, endDate: Date())) { result in
                         
                     }
                 }, label: {
-                    Text("Add to iCalendar").font(.caption).foregroundColor(Color.textGreen)
+                    Text("Add to iCalendar")
+                        .font(.caption)
+                        .foregroundColor(Color.textGreen)
                 })
             }
         }

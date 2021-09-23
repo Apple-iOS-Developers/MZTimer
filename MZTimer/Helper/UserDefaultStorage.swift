@@ -103,7 +103,8 @@ class UserDefaultStorage {
             iMessageHelper.makeMessage(message: "\(event.emoji) \(event.title)", event: event)
         }
         if UserDefaults.standard.bool(forKey: "AddCalender") {
-            iCalenderHelper.shared.addEvent(event: iCalenderEvent(title: "\(event.emoji) \(event.title)", note: "From MZTimer", time: event.time, startDate: event.startDate))
+            let event = iCalenderEvent(event: event, note: "From MZTimer")
+            iCalenderHelper.shared.addEvent(event: event)
         }
     }
     public func deleteEventAll(){

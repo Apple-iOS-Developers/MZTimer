@@ -34,6 +34,11 @@ struct Event: Hashable, Codable {
     }
 }
 extension DateFormatter {
+    func myFormattedString_DateTimeWithSeconds(date: Date) -> String {
+        self.dateFormat = "yyyy.MM.dd HH:mm:ss"
+        return self.string(from: date)
+    }
+    
     func myFormattedString_DateTime(date: Date) -> String {
         self.dateFormat = "yyyy.MM.dd HH:mm"
         return self.string(from: date)
@@ -48,13 +53,19 @@ extension Date {
     func calculateStartDate(endDate: Date ,passedTime: Int) -> Date {
         return Calendar.current.date(byAdding: .second, value: -passedTime, to: endDate) ?? Date()
     }
+    
     func calculateEndDate(startDate: Date, passedTime: Int) -> Date {
         return startDate.addingTimeInterval(TimeInterval(passedTime))
+    }
+    
+    func dateWithTimeSecondsString() -> String {
+        return DateFormatter().myFormattedString_DateTimeWithSeconds(date: self)
     }
 
     func dateWithTimeString() -> String {
         return DateFormatter().myFormattedString_DateTime(date: self)
     }
+    
     func dateWithoutTimeString() -> String {
         return DateFormatter().myFormattedString_Date(date: self)
     }
@@ -63,7 +74,7 @@ extension Int {
     func convertTimeToString() -> String {
         let seconds = String( (self % 3600) % 60 )
         let minutes = String( (self % 3600) / 60 )
-        let  hours = String( (self / 3600)  )
+        let hours = String( (self / 3600)  )
 
         if hours != "0" && minutes != "0" {
             return "\(hours)h \(minutes)m \(seconds)s"
