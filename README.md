@@ -157,6 +157,8 @@ WatchOS Sharable Timer Side project
 
 - [ ] 앱) 타이머 실행시킨 상황에서 background 진입이나 terminate 될때 로컬 push noti
 - [ ] 앱) 워치에서 타이머 끝나면 폰 앱에 저장되게
+- [ ] 앱) 타이머 끝나면 이벤트 엔드뷰로 push 되도록 수정
+- [ ] 앱) 이벤트 엔드뷰에 share instagram story 추가
 
 - [ ] 워치) 워치에서 폰으로 끝난 이벤트 데이터 동기화
 
