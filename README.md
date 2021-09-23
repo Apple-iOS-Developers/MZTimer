@@ -117,16 +117,16 @@ WatchOS Sharable Timer Side project
 - [x] 앞으로 한일을 기록도 있지만 실제로 한일을 icloud calendar를 통해서 할수 있을 거같은데
 - [x] 카테고리 엔드뷰에서 카테고리 수정 기능 추가
 - 기록 엔드리스트 달력있어도 좋을듯
-- 앱 종료되거나 백끄라운드 상태일때 앱 켜짐 꺼짐 시간 비교해서 타이머 재개시키는 기능 추가해야함(현재는 앱 백그라운드시 정지되고 종료되면 바로 기록되고 끝남)
+- [x] 앱 종료되거나 백끄라운드 상태일때 앱 켜짐 꺼짐 시간 비교해서 타이머 재개시키는 기능 추가해야함(현재는 앱 백그라운드시 정지되고 종료되면 바로 기록되고 끝남)
 - 캘린더 다시 전부 export 기능
 
 #### update 2021/06/14
 - 기록 최소 기록 최소 시간 세팅에 있으면 좋을듯
 
 #### update 2021/07/04
-- 기록 마다 calendar export 기능 추가
+- [x] 기록 마다 calendar export 기능 추가
 - 기록 마다 공유기능 추가
-- 타이머 로직은 초단위가 아닌 시작 시간 끝시간으로 계산해서 앱 꺼지더라도 복구 가능하게 변경
+- [x] 타이머 로직은 초단위가 아닌 시작 시간 끝시간으로 계산해서 앱 꺼지더라도 복구 가능하게 변경
     - idle 상태에서 background -> foreground [테스트완료]
     - idle 상태에서 terminated -> foreground [테스트완료]
     - 타이머 시작 상태에서 background -> foreground [테스트완료]
@@ -147,3 +147,9 @@ WatchOS Sharable Timer Side project
 - 워치에서 이벤트 끝난 뒤 기록보여주면서 메시지 공유할지 iCalender 기록 추가할지 버튼으로 물어보기(폰에서는 세팅에 따라 자동으로 됬지만 워치는 그떄그때 물어보자)
 - 공유기능이 부족함 instagram share 추가하면 좋을듯
 - 버그 리포트는 깃헙 이슈 api 연동해서 이슈 자동으로 만들어지도록?
+
+#### update 2021/09/23
+- emoji 입력값 확인 및 max len 1 제약 추가
+- default emoji random generate
+- emoji suggestion (like keyboard - if possible)
+- 워치에서 캘린더 이벤트 생성불가 -> 폰으로 보내서 생성해야됨,,
