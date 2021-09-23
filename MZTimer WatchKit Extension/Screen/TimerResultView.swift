@@ -11,12 +11,20 @@ struct TimerResultView: View {
 
     @State var event: Event
     @Binding var showTimerResultView: Bool
+    
+    @EnvironmentObject var viewModel: WatchViewModel
 
     var body: some View {
         ScrollView{
             VStack(alignment:.leading) {
-                Text(event.emoji).font(.largeTitle)
-                Text(event.title).font(.body).foregroundColor(Color.textGreen).bold()
+                Text(event.emoji)
+                    .font(.largeTitle)
+                
+                Text(event.title)
+                    .font(.body)
+                    .foregroundColor(Color.textGreen)
+                    .bold()
+                
                 Spacer()
 
                 Text("total time").font(.body).foregroundColor(Color.textGreen).underline()
@@ -28,24 +36,29 @@ struct TimerResultView: View {
                 Text("end date").font(.body).foregroundColor(Color.textGreen).underline()
                 Text("\(event.endDate.dateWithTimeString())")
 
+            
+            }
+            VStack(alignment:.leading, spacing: 3) {
                 Button(action: {
                     showTimerResultView = false
                 }, label: {
                     Text("Done").font(.caption).foregroundColor(Color.textGreen)
                 })
-
+                
                 Button(action: {
-                    iCalenderHelpber.
+                    viewModel.sendEventDataToPhone(event: Event(emoji: "", title: "", time: 0, endDate: Date())) { result in
+                        
+                    }
                 }, label: {
                     Text("Add to iCalendar").font(.caption).foregroundColor(Color.textGreen)
                 })
-
             }
         }
         .frame(
             width: WKInterfaceDevice.currentResolution == .watch38mm ? 136: 156
         )
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitle(Text("Result"))
 
     }
 }

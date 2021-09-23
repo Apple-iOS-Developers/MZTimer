@@ -12,6 +12,8 @@ struct TimerView: View {
     @Binding var pushTimer: Bool
 
     @ObservedObject var timerViewModel: WatchTimerViewModel
+    @EnvironmentObject var viewModel: WatchViewModel
+
     @State private var isStopPressed: Bool = false
     @State private var showTimerResultView: Bool = false
     @State private var savedEvent: Event?
@@ -86,6 +88,7 @@ struct TimerView: View {
             }
         })
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitle(Text("Timer"))
         
     }
 }

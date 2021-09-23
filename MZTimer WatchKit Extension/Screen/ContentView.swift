@@ -9,29 +9,21 @@ import SwiftUI
 import WatchConnectivity
 
 struct ContentView: View {
-
     @ObservedObject var viewModel: WatchViewModel
-
+    
     var body: some View {
-
-
-        VStack(alignment:.leading) {
-            Text("Category")
-                .bold()
-                .padding(.horizontal,10)
-                .foregroundColor(Color.rowTitle)
-
-            Spacer()
+        NavigationView {
 
             ScrollView{
                 LazyVStack(alignment:.leading, spacing:10) {
                     ForEach(viewModel.categories, id: \.self) {
                         CategoryRow(category: $0)
+                            .environmentObject(viewModel)
                     }
                 }
             }
-
-        }
+        
+        }.navigationBarTitle(Text("Category"))
     }
 }
 
