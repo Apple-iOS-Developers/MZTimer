@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddCategoryModal: View {
-    @State var emoji: String = ""
+    @State var emoji: String = "".getRandomEmoji()
     @State var name: String = ""
 
     @Binding var showModal: Bool
@@ -35,9 +35,11 @@ struct AddCategoryModal: View {
                     .cornerRadius(10)
                 
                 Button(action: {
-                    if emoji == "" || name == "" {
+                    if emoji == "" || name == "" && emoji.isSingleEmoji && emoji.count == 1 {
+                        // 상황에 맞게 alert 떠야함
                         return
                     }
+    
                     let newCategory = Category(emoji: emoji, title: name)
                     if UserDefaultStorage.shared.checkCategoryDuplicated(category: newCategory) { showModal = false }
                     viewModel.category.append(newCategory)
