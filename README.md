@@ -178,3 +178,4 @@ WatchOS Sharable Timer Side project
 - [ ] 기간별 통계(캘린더 뷰)
 - [ ] 보낼 상용구 커스텀 
 - [ ] Userdefaults -> CoreData
+- [ ] StateObject, ObservedObject?
