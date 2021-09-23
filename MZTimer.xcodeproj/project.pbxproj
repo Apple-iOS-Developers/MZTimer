@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83DC60D726FCC91E00E8939A /* InstagramShareHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC60D626FCC91E00E8939A /* InstagramShareHelper.swift */; };
 		83E7B54926D555A700292B35 /* iMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7B54826D555A700292B35 /* iMessageHelper.swift */; };
 		CE07EDB92674BD3B00C7B19F /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDB82674BD3B00C7B19F /* CategoryRow.swift */; };
 		CE07EDBB2674EE0F00C7B19F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDBA2674EE0F00C7B19F /* SettingsView.swift */; };
@@ -102,6 +103,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		83DC60D626FCC91E00E8939A /* InstagramShareHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramShareHelper.swift; sourceTree = "<group>"; };
 		83E7B54826D555A700292B35 /* iMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageHelper.swift; sourceTree = "<group>"; };
 		CE07EDB82674BD3B00C7B19F /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		CE07EDBA2674EE0F00C7B19F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				83E7B54826D555A700292B35 /* iMessageHelper.swift */,
 				CEDEF91026633E5D00FF89D0 /* UserDefaultStorage.swift */,
 				CEDEF9132663459500FF89D0 /* WatchManager.swift */,
+				83DC60D626FCC91E00E8939A /* InstagramShareHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				CEDEF8E926626C4B00FF89D0 /* CategoryEndView.swift in Sources */,
 				CE58AD82266355DF00B434D2 /* ContactBrowserView.swift in Sources */,
 				CE58AD7E266351F300B434D2 /* Contact.swift in Sources */,
+				83DC60D726FCC91E00E8939A /* InstagramShareHelper.swift in Sources */,
 				CEDEF8F62662824B00FF89D0 /* EventListEndView.swift in Sources */,
 				CE58AD80266353C600B434D2 /* ContactEndListView.swift in Sources */,
 				CE07EDB92674BD3B00C7B19F /* CategoryRow.swift in Sources */,
