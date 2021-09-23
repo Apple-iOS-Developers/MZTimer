@@ -34,6 +34,12 @@ struct TimerResultView: View {
                     Text("Done").font(.caption).foregroundColor(Color.textGreen)
                 })
 
+                Button(action: {
+                    iCalenderHelpber.
+                }, label: {
+                    Text("Add to iCalendar").font(.caption).foregroundColor(Color.textGreen)
+                })
+
             }
         }
         .frame(

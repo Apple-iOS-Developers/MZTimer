@@ -268,7 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				CE54F16C26F7771100FE4B84 /* Helper */,
-				CEDEF9082662A05000FF89D0 /* View */,
+				CEDEF9082662A05000FF89D0 /* Screen */,
 				CEDEF8CA2662529A00FF89D0 /* MZTimerApp.swift */,
 				CEDEF8CE2662529A00FF89D0 /* NotificationController.swift */,
 				CEDEF8D02662529A00FF89D0 /* NotificationView.swift */,
@@ -346,7 +346,7 @@
 			path = CategorySection;
 			sourceTree = "<group>";
 		};
-		CEDEF9082662A05000FF89D0 /* View */ = {
+		CEDEF9082662A05000FF89D0 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
 				CEDEF8CC2662529A00FF89D0 /* ContentView.swift */,
@@ -355,7 +355,7 @@
 				CE54F16A26F7770C00FE4B84 /* WatchTimerViewModel.swift */,
 				CE54F16F26F785DB00FE4B84 /* TimerResultView.swift */,
 			);
-			path = View;
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

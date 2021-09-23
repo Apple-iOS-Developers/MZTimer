@@ -10,6 +10,14 @@ import WatchConnectivity
 import SwiftUI
 import Combine
 
+enum WatchConnectivityResult: String {
+    case isNotInstalled = "Companion watch app is not installed"
+    case isNotReachable = "Companion watch app is not running"
+    case sendMessageError = "Unknown watch app error"
+    case success = "success"
+    case jsonEncodingError = "JSON encoding error"
+}
+
 class WatchViewModel: NSObject, ObservableObject {
 
     private var session: WCSession = WCSession.default
@@ -68,9 +76,32 @@ class WatchViewModel: NSObject, ObservableObject {
         contacts = WatchUserDefaultStorage.shared.loadContact()
     }
 
-    func sendDataToiPhone() {
-        let sampleData = ["data":"string from apple watch"]
-        session.sendMessage(sampleData, replyHandler: nil, errorHandler: nil)
+    public func sendEventDataToPhone(event: Event, completion: @escaping (WatchConnectivityResult) -> Void) {
+        if !session.isCompanionAppInstalled {
+            completion(.isNotInstalled)
+            return
+        }
+
+        if session.isReachable {
+            do {
+                let encoder = JSONEncoder()
+                let event = try encoder.encode(event)
+                let message: [String: Any] = ["event":event]
+                session.sendMessage(message, replyHandler: nil) { error in
+                    completion(.sendMessageError)
+                    
+                }
+            } catch {
+                completion(.jsonEncodingError)
+                return
+            }
+        }
+        else {
+            completion(.isNotReachable)
+            return
+        }
+        completion(.success)
+
     }
 }
 extension WatchViewModel: WCSessionDelegate {
