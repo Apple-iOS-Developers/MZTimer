@@ -33,7 +33,10 @@ class TimerViewModel: NSObject, ObservableObject {
         NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: .main) { [weak self] _ in
             guard let `self` = self else { return }
             if self.getTimerStatus() {
-                self.tempSave(event:Event(emoji: self.currentCategory.emoji, title: self.currentCategory.title, time: self.passedTimeSeconds, startDate: self.startDate ?? Date()))
+                let tempEvent = Event(emoji: self.currentCategory.emoji, title: self.currentCategory.title, time: self.passedTimeSeconds, startDate: self.startDate ?? Date())
+                self.tempSave(event:tempEvent)
+                
+                LocalPushHelper.shared.sendNotification(event: tempEvent)
             }
         }
 
