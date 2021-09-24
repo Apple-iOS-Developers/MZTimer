@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
+import Combine
 
 struct AddCategoryModal: View {
     @State var emoji: String = "".getRandomEmoji()
     @State var name: String = ""
 
     @Binding var showModal: Bool
+    
     @ObservedObject var viewModel: CategoryListEndViewModel
-
+    
     var body: some View {
         ScrollView{
             VStack(alignment:.leading, spacing:10) {
@@ -24,6 +26,8 @@ struct AddCategoryModal: View {
                     .padding(.horizontal, 20)
                     .background(Color.rowBackground)
                     .cornerRadius(10)
+                    .onReceive(Just(emoji)) { _ in limitText(1) }
+                    
                 
                 
                 Text("Category Name")
@@ -66,6 +70,13 @@ struct AddCategoryModal: View {
         .preferredColorScheme(.dark)
 
     }
+    
+    //Function to keep text length in limits
+      func limitText(_ upper: Int) {
+          if emoji.count > upper {
+              emoji = String(emoji.prefix(upper))
+          }
+      }
 }
 
 struct AddCategoryModal_Previews: PreviewProvider {
