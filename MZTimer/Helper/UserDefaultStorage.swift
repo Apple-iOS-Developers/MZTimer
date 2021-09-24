@@ -96,6 +96,11 @@ class UserDefaultStorage {
         return event
     }
     public func saveEvent(event: Event) {
+        if event.time < Int(UserDefaults.standard.string(forKey: "MinimumTime") ?? "5") ?? 5 {
+            print("이벤트 시간 짧아서 무시")
+            return
+        }
+        
         self.event.append(event)
         updateEvent()
 

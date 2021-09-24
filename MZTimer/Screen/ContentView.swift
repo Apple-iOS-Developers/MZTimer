@@ -24,7 +24,13 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 Color.black
-                ScrollView {
+                ScrollView(showsIndicators: false) {
+                    
+                    PullToRefresh(coordinateSpaceName: "pullToRefresh") {
+                        viewModel.reloadData()
+                        print("refresh data")
+                    }
+                    
                     VStack {
                         Spacer().frame(height:100)
 
@@ -53,7 +59,9 @@ struct ContentView: View {
                         addFooterView()
 
                     }
-                }.padding(safeAreaInsets)
+                }
+                .padding(safeAreaInsets)
+                .coordinateSpace(name: "pullToRefresh")
             }
             .ignoresSafeArea()
             .navigationBarTitleDisplayMode(.automatic)
@@ -62,6 +70,7 @@ struct ContentView: View {
         }
         .preferredColorScheme(.dark)
         .onAppear(perform: {
+            _ = WatchManager.shared
             checkInitialLaunch()
         })
     }
@@ -189,8 +198,44 @@ extension ContentView {
     func checkInitialLaunch() {
         if UserDefaults.standard.bool(forKey: "initialLaunch") == false || UserDefaults.standard.string(forKey: "UserName") == nil {
             UserDefaults.standard.setValue(true, forKey: "initialLaunch")
+            UserDefaults.standard.setValue("5", forKey: "MinimumTime")
             showSettingFullScreen.toggle()
         }
     }
 }
 
+struct PullToRefresh: View {
+    
+    var coordinateSpaceName: String
+    var onRefresh: ()->Void
+    
+    @State var needRefresh: Bool = false
+    
+    var body: some View {
+        GeometryReader { geo in
+            if (geo.frame(in: .named(coordinateSpaceName)).midY > 50) {
+                Spacer()
+                    .onAppear {
+                        needRefresh = true
+                    }
+            } else if (geo.frame(in: .named(coordinateSpaceName)).maxY < 10) {
+                Spacer()
+                    .onAppear {
+                        if needRefresh {
+                            needRefresh = false
+                            onRefresh()
+                        }
+                    }
+            }
+            HStack {
+                Spacer()
+                if needRefresh {
+                    ProgressView()
+                } else {
+                    Text("⬇️")
+                }
+                Spacer()
+            }
+        }.padding(.top, -50)
+    }
+}

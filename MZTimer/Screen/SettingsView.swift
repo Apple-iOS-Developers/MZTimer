@@ -12,6 +12,7 @@ struct SettingsView: View {
     @State private var sendMessage: Bool = UserDefaults.standard.bool(forKey: "SendMessage")
     @State private var addCalender: Bool = UserDefaults.standard.bool(forKey: "AddCalender")
     @State private var userName: String = UserDefaults.standard.string(forKey: "UserName") ?? ""
+    @State private var minimumTime: String = UserDefaults.standard.string(forKey: "MinimumTime") ?? "0"
     
     @State private var showAlert: Bool = false
     @State private var showWatchConnectivityResultAlarm = false
@@ -28,6 +29,15 @@ struct SettingsView: View {
             Text("Settings").font(.largeTitle)
 
             Spacer().frame(height:50)
+            
+            VStack(alignment: .leading, spacing: 0 ){
+                Text("Timer event Minimum time")
+                TextField("Enter Minimum time to record event", text: $minimumTime)
+                Text("description").font(.caption).foregroundColor(.yellow)
+                Text("When event time is less than minimum time \nrecord will be ignored").font(.caption)
+            }
+            .padding()
+            .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
 
             VStack(alignment:.leading, spacing:0){
                 Toggle(sendMessage ? "Text messaging enabled" : "Text messaging disabled", isOn: $sendMessage)
@@ -39,7 +49,7 @@ struct SettingsView: View {
                         }
                     })
                 Text("description").font(.caption).foregroundColor(.yellow)
-                Text("When timer ends, app will automatically make message to share event to friends").font(.caption)
+                Text("When timer ends, app will automatically \nmake message to share event to friends").font(.caption)
 
                 Spacer().frame(height:10)
 
@@ -77,7 +87,7 @@ struct SettingsView: View {
 
             VStack(alignment: .leading, spacing: 0){
                 HStack {
-                    Text("Sync data with your watch")
+                    Text("Export Category data to apple watch")
                     Spacer()
                     Button(action: {
                         WatchManager.shared.syncDataToWatch { watchConnectivityResult in
@@ -85,7 +95,7 @@ struct SettingsView: View {
                             self.watchConnectivityResult = watchConnectivityResult
                         }
                     }, label: {
-                        Text("Sync")
+                        Text("Export")
                             .foregroundColor(.white)
                             .frame(width: 60, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             .background(Color.green)
