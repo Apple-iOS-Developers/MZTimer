@@ -147,35 +147,34 @@ WatchOS Sharable Timer Side project
 ---
 
 ### [v1.0.0 남은할일]
-- [ ] 워치 타이머) 워치 life cycle 에 따라 stop, pause, resume 로직 점검해야함 (버그있음)
-
-- [ ] 카테고리 생성시) emoji 입력값 확인 및 max len 1 제약 추가
-- [ ] 카테고리 생성시) default emoji random generate
-- [ ] 카테고리 생성시) emoji suggestion (like keyboard - if possible)
-
-- [ ] 설정 화면) 기록 최소시간 설정 기능(default 10 secs)
-
-- [ ] 앱) 타이머 실행시킨 상황에서 background 진입이나 terminate 될때 로컬 push noti
-- [ ] 앱) 워치에서 타이머 끝나면 폰 앱에 저장되게
-- [ ] 앱) 타이머 끝나면 이벤트 엔드뷰로 push 되도록 수정
-- [ ] 앱) 이벤트 엔드뷰에 share instagram story 추가
-
-- [ ] 워치) 워치에서 폰으로 끝난 이벤트 데이터 동기화
-
-- [ ] 리팩토링) viewModel로 로직 정리
-
-- [ ] 공유하기) 기본 문자 내용 (한글?/영어?)
-    ```
-    xxx님이운동을 완료함
-    실외걷기
-    총거리(시간)
-    ```
-    
-- [ ] 공유하기) 공유기능이 부족함 instagram share 추가하면 좋을듯
+- [x] 워치 타이머) 워치 life cycle 에 따라 stop, pause, resume 로직 점검해야함 (버그있음)
+- [x] 카테고리 생성시) emoji 입력값 확인 및 max len 1 제약 추가
+- [x] 카테고리 생성시) default emoji random generate
+- [x] 설정 화면) 기록 최소시간 설정 기능(default 5 secs)
+- [x] 앱) 워치에서 타이머 끝나면 폰 앱에 저장되게
+- [x] 워치) 워치에서 폰으로 끝난 이벤트 데이터 동기화
+- [x] 공유하기) 기본 문자 내용 (한글?/영어?)
+- [x] 앱) 타이머 실행시킨 상황에서 background 진입이나 terminate 될때 로컬 push noti
+- [x] 공유하기) 공유기능이 부족함 instagram share 추가하면 좋을듯
+- [x] 앱) 이벤트 엔드뷰에 share instagram story 추가
 - [ ] VOC) 버그 리포트는 깃헙 이슈 api 연동해서 이슈 자동으로 만들어지도록?
 - [ ] 공유하기) imessage 그룹으로 보내지는 문제 해결해야함
 
-[v2.0.0 남은할일]
+
+- 출시를 위한 기능부터 완성하자
+1) 워치에서 타이머 기능
+2) 워치에서 타이머 이벤트 폰이랑 연동
+
+- 그 다음 버그나 UX개선하자
+1) 메시지 작성
+2) 설명 텍스트 관리
+
+- 그 다음 추가기능 구현하자
+1) 인스타 공유기능
+
+[v2.0.0 예상할일]
+- [ ] 카테고리 생성시) emoji suggestion (like keyboard - if possible)
+- [ ] 앱) 타이머 끝나면 이벤트 엔드뷰로 push 되도록 수정
 - [ ] 워치) 애플워치에서 타이머 실행될 때 폰에서도 동기화
 - [ ] 기간별 통계(캘린더 뷰)
 - [ ] 보낼 상용구 커스텀 
