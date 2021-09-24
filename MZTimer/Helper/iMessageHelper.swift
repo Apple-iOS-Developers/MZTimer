@@ -9,8 +9,9 @@ import Foundation
 import UIKit
 
 class iMessageHelper {
-    class func makeMessage(message: String, event: Event) {
-        let messageBody = "김태형님이 \n[\(message)]를 완료했습니다 \n 수행시간:\(event.time)시"
+    class func makeMessage(event: Event) {
+        let username = UserDefaults.standard.value(forKey: "Username") ?? "unknown"
+        let messageBody = "\(username) completed \n[\(event.emoji)\(event.title)]task \ntime:\(event.time.convertTimeToString())"
         let urlSafeBody = messageBody.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         let phoneNumber: [String] = UserDefaultStorage.shared.loadContact().map{ $0.phoneNumber }
         let phoneString = phoneNumber.joined(separator: ",")

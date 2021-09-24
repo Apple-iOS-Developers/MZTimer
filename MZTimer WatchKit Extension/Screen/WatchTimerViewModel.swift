@@ -59,6 +59,7 @@ class WatchTimerViewModel: NSObject, ObservableObject {
                 NotificationCenter.default.post(name: .AppEnterForeground, object: nil, userInfo: ["event":event as Any] )
             }
         }
+        
         self.start(category: currentCategory)
     }
 

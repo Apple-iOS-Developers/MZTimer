@@ -99,7 +99,7 @@ class EventEndViewModel: NSObject, ObservableObject {
         
         action.shareToFriend
             .sink(receiveValue: {
-                iMessageHelper.makeMessage(message: "message 내용", event: event)
+                iMessageHelper.makeMessage(event: event)
             }).store(in: &cancellables)
         
         action.exportToCalender

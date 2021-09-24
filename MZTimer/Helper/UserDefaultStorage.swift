@@ -105,7 +105,7 @@ class UserDefaultStorage {
         updateEvent()
 
         if UserDefaults.standard.bool(forKey: "SendMessage") {
-            iMessageHelper.makeMessage(message: "\(event.emoji) \(event.title)", event: event)
+            iMessageHelper.makeMessage(event: event)
         }
         if UserDefaults.standard.bool(forKey: "AddCalender") {
             let event = iCalenderEvent(event: event, note: "From MZTimer")
