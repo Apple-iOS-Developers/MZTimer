@@ -23,7 +23,7 @@ struct ContentView: View {
                 }
             }
         
-        }.navigationBarTitle(Text("Category"))
+        }
     }
 }
 
@@ -38,6 +38,7 @@ struct CategoryRow: View {
     private let category: Category
 
     @State private var pushTimer: Bool = false
+    @EnvironmentObject var viewModel: WatchViewModel
 
     init(category: Category) {
         self.category = category
@@ -45,7 +46,7 @@ struct CategoryRow: View {
 
     var body: some View {
             NavigationLink(
-                destination: TimerView(pushTimer: $pushTimer, timerViewModel: WatchTimerViewModel(currentCategory: category)),
+                destination: TimerView(pushTimer: $pushTimer, timerViewModel: WatchTimerViewModel(currentCategory: category)).environmentObject(viewModel),
                 isActive: $pushTimer,
                 label: {
                     HStack(alignment:.bottom, spacing: 5) {

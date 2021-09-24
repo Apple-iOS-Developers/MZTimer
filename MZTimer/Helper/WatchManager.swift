@@ -28,6 +28,7 @@ class WatchManager :NSObject{
             watchSession.delegate = self
             watchSession.activate()
         }
+        print("watch manager inited")
     }
 
     private func isReachable() -> Bool {
@@ -82,19 +83,14 @@ extension WatchManager: WCSessionDelegate {
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         print("[WatchManager] received Message \(message)")
-        
+      
         let decoder = JSONDecoder()
         let event = try? decoder.decode(Event.self, from: message["event"] as! Data)
         
-        let calendarEvent = try? decoder.decode(Event.self, from: message["calendarEvent"] as! Data)
-        
-        if let event = event {
-            UserDefaultStorage.shared.saveEvent(event: event)
-        }
-        
-        if let calendarEvent = calendarEvent {
-            let event = iCalenderEvent(event: calendarEvent, note: "From MZTimer WatchApp")
-            iCalenderHelper.shared.addEvent(event: event)
+        DispatchQueue.main.async {
+            if let event = event {
+                UserDefaultStorage.shared.saveEvent(event: event)
+            }
         }
     }
 

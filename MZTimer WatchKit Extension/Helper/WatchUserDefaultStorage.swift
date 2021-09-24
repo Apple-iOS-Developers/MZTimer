@@ -133,9 +133,10 @@ class WatchUserDefaultStorage {
     }
 
     public func syncDataWithiPhone(categories: [Category], events: [Event], contacts: [Contact]) {
-        self.category.append(contentsOf: categories)
-        self.event.append(contentsOf: events)
-        self.contact.append(contentsOf: contacts)
+        
+        self.category = categories
+        self.event = events
+        self.contact = contacts
         self.updateCategory()
         self.updateEvent()
         self.updateContact()

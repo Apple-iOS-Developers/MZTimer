@@ -90,34 +90,6 @@ class WatchViewModel: NSObject, ObservableObject {
                 let message: [String: Any] = ["event":event]
                 session.sendMessage(message, replyHandler: nil) { error in
                     completion(.sendMessageError)
-                    
-                }
-            } catch {
-                completion(.jsonEncodingError)
-                return
-            }
-        }
-        else {
-            completion(.isNotReachable)
-            return
-        }
-        completion(.success)
-    }
-    
-    public func makeCalendarEvent(event: Event, completion: @escaping (WatchConnectivityResult) -> Void) {
-        if !session.isCompanionAppInstalled {
-            completion(.isNotInstalled)
-            return
-        }
-        
-        if session.isReachable {
-            do {
-                let encoder = JSONEncoder()
-                let event = try encoder.encode(event)
-                let message: [String: Any] = ["calendarEvent":event]
-                session.sendMessage(message, replyHandler: nil) { error in
-                    completion(.sendMessageError)
-                    
                 }
             } catch {
                 completion(.jsonEncodingError)

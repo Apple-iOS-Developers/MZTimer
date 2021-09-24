@@ -11,7 +11,7 @@ struct TimerView: View {
 
     @Binding var pushTimer: Bool
 
-    @ObservedObject var timerViewModel: WatchTimerViewModel
+    @StateObject var timerViewModel: WatchTimerViewModel
     @EnvironmentObject var viewModel: WatchViewModel
 
     @State private var isStopPressed: Bool = false
@@ -31,9 +31,8 @@ struct TimerView: View {
             }
             Spacer()
             HStack{
-
                 NavigationLink(
-                    destination: TimerResultView(event: savedEvent ?? Event(emoji: "", title: "", time: 0, endDate: Date()), showTimerResultView: $showTimerResultView),
+                    destination: TimerResultView(event: savedEvent ?? Event(emoji: "", title: "", time: 0, endDate: Date()), showTimerResultView: $showTimerResultView).environmentObject(viewModel),
                     isActive: $showTimerResultView,
                     label: {
                         Text("Stop")
@@ -88,7 +87,6 @@ struct TimerView: View {
             }
         })
         .navigationBarBackButtonHidden(true)
-        .navigationBarTitle(Text("Timer"))
         
     }
 }
