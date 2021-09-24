@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 struct EventEndView: View {
+    
     @ObservedObject var viewModel: EventEndViewModel
     
     var body: some View {
@@ -33,34 +34,50 @@ struct EventEndView: View {
 //                Text("최저시급 기준 \(event.time.toWageTime())원을 벌었습니다.")
 //            }
             Spacer()
-            
-            HStack(alignment:.center) {
-                
-                Spacer()
-                
-                Button("Export to iCalender") {
-                    viewModel.action.exportToCalender.send(())
-                }
-                .foregroundColor(.yellow)
-                .frame(width: 180, height: 44, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .background(Color.blue.opacity(0.5))
-                .cornerRadius(10)
 
-                Spacer()
-                
-                Button("Share to Friends") {
-                    viewModel.action.shareToFriend.send(())
+            VStack {
+                HStack(alignment:.center) {
+                    
+                    Button {
+                        viewModel.action.exportToCalender.send(())
+                    } label: {
+                        Text("Export to iCalender").bold()
+                    }
+                    .foregroundColor(.yellow)
+                    .frame(width: UIScreen.main.bounds.width/2-20, height: 44, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .background(Color.blue.opacity(0.5))
+                    .cornerRadius(10)
+                    .contentShape(Rectangle())
+
+                    
+                    Button {
+                        viewModel.action.shareToFriend.send(())
+                    } label: {
+                        Text("Share to Friends").bold()
+                    }
+                    .contentShape(Rectangle())
+                    .frame(width: UIScreen.main.bounds.width/2-20, height: 44, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.blue)
+                    .background(Color.yellow)
+                    .cornerRadius(10)
+ 
+                    
                 }
-                .frame(width: 180, height: 44, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .foregroundColor(.blue)
-                .background(Color.yellow)
-                .cornerRadius(10)
                 
-                Spacer()
+                Button {
+                    viewModel.action.shareToInstagram.send(())
+                } label: {
+                    Text("Share to Instagram Story").bold()
+                }
+                .frame(width: UIScreen.main.bounds.width-35, height: 44, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .foregroundColor(.white)
+                .background(Color.orange)
+                .cornerRadius(10)
+                .contentShape(Rectangle())
             }
             
             Spacer().frame(height:20)
-
+            
         }
         .frame(width: UIScreen.main.bounds.width, alignment: .center)
         .preferredColorScheme(.dark)
@@ -86,12 +103,18 @@ class EventEndViewModel: NSObject, ObservableObject {
     
     let event: Event
     
+    struct State {
+        var showAlert = PassthroughSubject<String, Never>()
+    }
+    
     struct Action {
         var shareToFriend = PassthroughSubject<Void,Never>()
         var exportToCalender = PassthroughSubject<Void,Never>()
+        var shareToInstagram = PassthroughSubject<Void,Never>()
     }
     
     let action = Action()
+    let state = State()
     
     init(event: Event) {
         self.event = event
@@ -107,6 +130,15 @@ class EventEndViewModel: NSObject, ObservableObject {
             .sink(receiveValue: {
                 let iCalEvent = iCalenderEvent(title: "\(event.emoji)\(event.title)", note: "From MZTimer", time: event.time, startDate: event.startDate)
                 iCalenderHelper.shared.addEvent(event: iCalEvent)
+            }).store(in: &cancellables)
+        
+        action.shareToInstagram
+            .sink(receiveValue: {
+                InstagramShareHelper.shareToInstagram(event: event) { result in
+                    if result == .fail {
+                        self.state.showAlert.send("Instagram app is not installed")
+                    }
+                }
             }).store(in: &cancellables)
     }
 

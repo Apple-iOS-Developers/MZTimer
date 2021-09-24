@@ -9,23 +9,29 @@ import Foundation
 import UIKit
 import SwiftUI
 
+enum InstagramShareResult {
+    case success
+    case fail
+}
+
 class InstagramShareHelper {
-    static func shareToInstagram(event: Event) {
+    static func shareToInstagram(event: Event, completion: @escaping (InstagramShareResult) -> Void) {
         if let urlScheme = URL(string: "instagram-stories://share") {
             if UIApplication.shared.canOpenURL(urlScheme) {
                 
-                let logoImage = #imageLiteral(resourceName: "logo")
-                let textImage = text2Image(event: event)
+                //let logoImage = #imageLiteral(resourceName: "logo")
+                //"com.instagram.sharedSticker.stickerImage": logoImage.pngData()!,
+                let shareImage = InstaStoryShareView(event: event).snapshot()
                 
-                let pasteboardItems: [String:Any] = ["com.instagram.sharedSticker.stickerImage": textImage.pngData()!,
-                                                     "com.instagram.sharedSticker.backgroundImage": logoImage.pngData()!]
+                let pasteboardItems: [String:Any] = ["com.instagram.sharedSticker.backgroundImage": shareImage.pngData()!]
 
                 let pasteboardOptions = [UIPasteboard.OptionsKey.expirationDate: Date().addingTimeInterval(60 * 5)]
 
                 UIPasteboard.general.setItems([pasteboardItems], options: pasteboardOptions)
                 UIApplication.shared.open(urlScheme as URL, options: [:], completionHandler: nil)
+                completion(.success)
             } else {
-                print("인스타 앱이 깔려있지 않습니다.")
+                completion(.fail)
             }
         }
     }
