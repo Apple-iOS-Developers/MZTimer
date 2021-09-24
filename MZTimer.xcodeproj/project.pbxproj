@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		83830D7026FD75EE003FA23E /* LocalPushHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83830D6F26FD75EE003FA23E /* LocalPushHelper.swift */; };
 		83830D7226FE235A003FA23E /* InstaStoryShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83830D7126FE235A003FA23E /* InstaStoryShareView.swift */; };
+		83830D7426FE3342003FA23E /* MadeByView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83830D7326FE3342003FA23E /* MadeByView.swift */; };
 		83DC60D726FCC91E00E8939A /* InstagramShareHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC60D626FCC91E00E8939A /* InstagramShareHelper.swift */; };
 		83E7B54926D555A700292B35 /* iMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7B54826D555A700292B35 /* iMessageHelper.swift */; };
 		CE07EDB92674BD3B00C7B19F /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDB82674BD3B00C7B19F /* CategoryRow.swift */; };
@@ -107,6 +108,7 @@
 /* Begin PBXFileReference section */
 		83830D6F26FD75EE003FA23E /* LocalPushHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPushHelper.swift; sourceTree = "<group>"; };
 		83830D7126FE235A003FA23E /* InstaStoryShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaStoryShareView.swift; sourceTree = "<group>"; };
+		83830D7326FE3342003FA23E /* MadeByView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeByView.swift; sourceTree = "<group>"; };
 		83DC60D626FCC91E00E8939A /* InstagramShareHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramShareHelper.swift; sourceTree = "<group>"; };
 		83E7B54826D555A700292B35 /* iMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageHelper.swift; sourceTree = "<group>"; };
 		CE07EDB82674BD3B00C7B19F /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				CEDEF8AF2662529500FF89D0 /* ContentView.swift */,
 				CE58AD862663B60C00B434D2 /* ViewModel.swift */,
 				CE07EDBA2674EE0F00C7B19F /* SettingsView.swift */,
+				83830D7326FE3342003FA23E /* MadeByView.swift */,
 				CE07EDB52673BC4500C7B19F /* TimerSection */,
 				CEDEF8FA2662846E00FF89D0 /* CategorySection */,
 				CEDEF8F92662846700FF89D0 /* EventSection */,
@@ -521,6 +524,7 @@
 				CEDEF8EE26627C5200FF89D0 /* EventModel.swift in Sources */,
 				CEDEF8FC2662847C00FF89D0 /* CategorySection.swift in Sources */,
 				CEDEF8F42662807F00FF89D0 /* EventEndView.swift in Sources */,
+				83830D7426FE3342003FA23E /* MadeByView.swift in Sources */,
 				83830D7226FE235A003FA23E /* InstaStoryShareView.swift in Sources */,
 				CEDEF91A26634E7400FF89D0 /* AddEventModal.swift in Sources */,
 				CEDEF91126633E5D00FF89D0 /* UserDefaultStorage.swift in Sources */,

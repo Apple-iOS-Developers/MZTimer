@@ -138,7 +138,9 @@ struct SettingsView: View {
         .preferredColorScheme(.dark)
         .foregroundColor(.white)
         .padding()
-        
+        .onTapGesture {
+            UIApplication.shared.endEditing()
+        }
 
     }
     

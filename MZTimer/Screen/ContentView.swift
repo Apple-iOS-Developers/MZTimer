@@ -19,6 +19,7 @@ struct ContentView: View {
     @State var isStopPressed = false
     @State var showSetting = false
     @State var showSettingFullScreen = false
+    @State var showMadeBy = false
 
     var body: some View {
         NavigationView {
@@ -186,9 +187,15 @@ extension ContentView {
 
             Spacer()
 
-            Button(action: {}, label: {
+            Button(action: {
+                showMadeBy.toggle()
+            }, label: {
                 Text("made by")
-            })
+            }).sheet(isPresented: $showMadeBy, onDismiss: {
+                showMadeBy = false
+            }) {
+                MadeByView()
+            }
 
             Spacer()
         }.padding(.vertical, 30)
