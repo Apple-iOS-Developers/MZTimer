@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 enum ScreenFrom {
     case home
@@ -42,7 +43,7 @@ struct CategoryListEndView: View {
 
     private func addGridView() -> some View {
         LazyVGrid(columns: categoryEndviewModel.flexibleLayout, spacing: 20) {
-            ForEach(categoryEndviewModel.category, id: \.self) { category in
+            ForEach(categoryEndviewModel.categories, id: \.self) { category in
                 ZStack {
                     CategoryRow(viewModel: viewModel, item: category, pushEnable: pushEnable)
                     if !pushEnable {
@@ -71,12 +72,18 @@ class CategoryListEndViewModel: NSObject, ObservableObject {
     var flexibleLayout = [GridItem(.flexible()), GridItem(.flexible())]
     @Published var showModal: Bool = false
     @Published var selectedCategory: Category = Category(emoji: "", title: "")
-    @Published var category: [Category] = []
+    @Published var categories: [Category] = []
+    
+    private var cancellables = Set<AnyCancellable>()
 
     override init() {
         super.init()
-        category = UserDefaultStorage.shared.loadCategory()
+        categories = UserDefaultStorage.shared.loadCategory()
         NotificationCenter.default.addObserver(self, selector: #selector(didAppBecomeForegorundReceived), name: .AppEnterForeground, object: nil)
+        
+        NotificationCenter.default.publisher(for: .CategoryUpdated).sink { _ in
+            self.reloadCategories()
+        }.store(in: &cancellables)
     }
 
     func resetSelectedCategory() {
@@ -91,5 +98,10 @@ class CategoryListEndViewModel: NSObject, ObservableObject {
         if let eventInfo = notification.userInfo?["event"] as? Event {
             selectedCategory = Category(emoji: eventInfo.emoji, title: eventInfo.title)
         }
+    }
+    
+    private func reloadCategories(){
+        categories.removeAll()
+        categories = UserDefaultStorage.shared.loadCategory()
     }
 }

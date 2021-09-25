@@ -43,10 +43,9 @@ struct AddCategoryModal: View {
                         // 상황에 맞게 alert 떠야함
                         return
                     }
-    
                     let newCategory = Category(emoji: emoji, title: name)
                     if UserDefaultStorage.shared.checkCategoryDuplicated(category: newCategory) { showModal = false }
-                    viewModel.category.append(newCategory)
+                    viewModel.categories.append(newCategory)
                     UserDefaultStorage.shared.saveCategory(category: newCategory)
                     showModal = false
                 }, label: {
