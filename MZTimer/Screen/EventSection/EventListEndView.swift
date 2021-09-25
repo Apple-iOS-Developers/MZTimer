@@ -21,14 +21,14 @@ struct EventListEndView: View {
             }
             Spacer().frame(height: 200)
         }
-        .toolbar {
+//        .toolbar {
 //            Button("추가하기") {
 //                showModal.toggle()
 //            }
-        }
-        .sheet(isPresented: $showModal) {
-            AddEventModal(showModal: $showModal, event:$events)
-        }
+//        }
+//        .sheet(isPresented: $showModal) {
+//            AddEventModal(showModal: $showModal, event:$events)
+//        }
         .navigationBarTitle("All records")
     
     }

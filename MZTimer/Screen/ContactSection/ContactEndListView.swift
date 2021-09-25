@@ -32,8 +32,9 @@ struct ContactEndListView: View {
             .padding(.top, 30)
             .onReceive(pub) { (obj) in
                 if let userInfo = obj.userInfo, let info = userInfo["contact"] {
-                    let contact = info as! CNContact
-                    let MobNumVar = (contact.phoneNumbers[0].value ).value(forKey: "digits") as! String
+                    guard let contact = info as? CNContact else { return }
+                    if contact.phoneNumbers.count == 0 { return }//번호 없는 주소 추가했을 때
+                    guard let MobNumVar = (contact.phoneNumbers[0].value).value(forKey: "digits") as? String else { return }
                     let newContact = Contact(name: contact.givenName, phoneNumber: MobNumVar, memo: contact.note)
                     address.append(newContact)
                     UserDefaultStorage.shared.saveContact(contact: newContact)

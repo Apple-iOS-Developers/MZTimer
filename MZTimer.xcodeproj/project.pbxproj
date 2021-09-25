@@ -339,9 +339,9 @@
 			children = (
 				CEDEF8FD2662848500FF89D0 /* EventSection.swift */,
 				CEDEF8F52662824B00FF89D0 /* EventListEndView.swift */,
+				CE07EDC52675F93600C7B19F /* EventRow.swift */,
 				CEDEF8F32662807F00FF89D0 /* EventEndView.swift */,
 				CEDEF91926634E7400FF89D0 /* AddEventModal.swift */,
-				CE07EDC52675F93600C7B19F /* EventRow.swift */,
 			);
 			path = EventSection;
 			sourceTree = "<group>";

@@ -239,7 +239,7 @@ struct PullToRefresh: View {
                 if needRefresh {
                     ProgressView()
                 } else {
-                    Text("⬇️")
+                    Text("")
                 }
                 Spacer()
             }

@@ -10,7 +10,7 @@ import Combine
 
 struct EventEndView: View {
     
-    @ObservedObject var viewModel: EventEndViewModel
+    @StateObject var viewModel: EventEndViewModel
     
     @State var startDate: Date
     @State var endDate: Date
