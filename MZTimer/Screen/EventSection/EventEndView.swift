@@ -12,28 +12,35 @@ struct EventEndView: View {
     
     @ObservedObject var viewModel: EventEndViewModel
     
+    @State var startDate: Date
+    @State var endDate: Date
+    
     var body: some View {
         VStack(spacing:20) {
             
             Spacer()
-
-            HStack(alignment:.center) {
-                Text(viewModel.event.emoji).font(.system(size: 60))
-                Text(viewModel.event.title).font(.largeTitle)
-            }
-
             VStack(alignment:.center, spacing:10){
-                Text("Total: \(viewModel.event.time.convertTimeToString())").font(.system(size: 20))
+                HStack(alignment:.center) {
+                    Text(viewModel.event.emoji).font(.system(size: 60))
+                    Text(viewModel.event.title).font(.largeTitle)
+                }
+                
+                Text("Total: \(Int(endDate.timeIntervalSince(startDate)).convertTimeToString())").font(.system(size: 20))
                     .bold()
-                Text("start: \(viewModel.event.startDate.dateWithTimeString())")
-                Text("end: \(viewModel.event.endDate.dateWithTimeString())")
+                
+                Form {
+                    DatePicker("Start Date", selection: $startDate, in: ...endDate)
+                    DatePicker("End Date", selection: $endDate, in: startDate...)
+                    Button {
+                        let newEvent = Event(emoji: viewModel.event.emoji, title: viewModel.event.title, time: Int(endDate.timeIntervalSince(startDate)), endDate: endDate)
+                        UserDefaultStorage.shared.updateEvent(before: viewModel.event, after: newEvent)
+                    } label: {
+                        Text("save")
+                    }
+                }
             }
 
-//            VStack(spacing:10){
-//                Text("🍜라면을 총 \(event.time.toRamenTime())개 끓였습니다. ")
-//                Text("최저시급 기준 \(event.time.toWageTime())원을 벌었습니다.")
-//            }
-            Spacer()
+
 
             VStack {
                 HStack(alignment:.center) {
@@ -86,7 +93,8 @@ struct EventEndView: View {
 
 struct EventEndView_Previews: PreviewProvider {
     static var previews: some View {
-        EventEndView(viewModel: EventEndViewModel(event: Event(emoji: "🥯", title: "빵먹기", time: 100, startDate: Date())))
+        let viewModel = EventEndViewModel(event: Event(emoji: "🥯", title: "빵먹기", time: 100, startDate: Date()))
+        EventEndView(viewModel: viewModel, startDate: viewModel.event.startDate, endDate: viewModel.event.endDate)
     }
 }
 extension Int {

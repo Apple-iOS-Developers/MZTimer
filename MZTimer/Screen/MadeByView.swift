@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct MadeByView: View {
     @State var bugReport: String = ""
@@ -34,7 +35,19 @@ struct MadeByView: View {
             })
             .background(Color.gray.opacity(0.2))
             .cornerRadius(10)
-            .padding(.top, 100)
+            
+            Button(action: {
+                if let scene = UIApplication.shared.windows.first?.windowScene {
+                    SKStoreReviewController.requestReview(in: scene)
+                }
+
+            }, label: {
+                Text("Review this app").foregroundColor(.white).font(.title)
+                    .frame(width: UIScreen.main.bounds.width-40, height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            })
+            .background(Color.gray.opacity(0.2))
+            .cornerRadius(10)
+
         }
         .preferredColorScheme(.dark)
         .foregroundColor(.white)

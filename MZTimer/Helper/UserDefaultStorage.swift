@@ -87,6 +87,12 @@ class UserDefaultStorage {
             updateCategory()
         }
     }
+    public func updateEvent(before: Event, after: Event) {
+        if let index = self.event.firstIndex(of: before) {
+            self.event[index] = after
+            updateEvent()
+        }
+    }
     public func checkCategoryDuplicated(category: Category) -> Bool {
         return self.category.contains(category) ? true : false
     }
