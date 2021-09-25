@@ -157,20 +157,10 @@ WatchOS Sharable Timer Side project
 - [x] 앱) 타이머 실행시킨 상황에서 background 진입이나 terminate 될때 로컬 push noti
 - [x] 공유하기) 공유기능이 부족함 instagram share 추가하면 좋을듯
 - [x] 앱) 이벤트 엔드뷰에 share instagram story 추가
-- [ ] VOC) 버그 리포트는 깃헙 이슈 api 연동해서 이슈 자동으로 만들어지도록?
-- [ ] 공유하기) imessage 그룹으로 보내지는 문제 해결해야함
+- [x] VOC) 버그 리포트는 깃헙 이슈 api 연동해서 이슈 자동으로 만들어지도록?
+- [x] 이벤트 엔드뷰에서 기록 수정할 수 있도록
+- [x] 공유하기) imessage 그룹으로 보내지는 문제 해결해야함
 
-
-- 출시를 위한 기능부터 완성하자
-1) 워치에서 타이머 기능
-2) 워치에서 타이머 이벤트 폰이랑 연동
-
-- 그 다음 버그나 UX개선하자
-1) 메시지 작성
-2) 설명 텍스트 관리
-
-- 그 다음 추가기능 구현하자
-1) 인스타 공유기능
 
 [v2.0.0 예상할일]
 - [ ] 카테고리 생성시) emoji suggestion (like keyboard - if possible)
