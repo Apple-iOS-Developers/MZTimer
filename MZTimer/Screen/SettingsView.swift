@@ -24,8 +24,7 @@ struct SettingsView: View {
         
         
         VStack(alignment:.center) {
-            ScrollView {
-                
+            ScrollView(showsIndicators: false) {
                 HStack{
                     Text("Settings").font(.largeTitle)
                     Spacer()
@@ -82,7 +81,7 @@ struct SettingsView: View {
                 
                 VStack(alignment: .leading, spacing: 0 ){
                     Text("User name")
-                    TextField("Enter your name/nickname (Required)", text: $userName)
+                    TextField("Enter your name/nickname (Required)", text: $userName).foregroundColor(Color.green)
                     Text("description").font(.caption).foregroundColor(.yellow)
                     Text("When sharing to friends, message will created by using this name").font(.caption)
                 }
@@ -108,7 +107,7 @@ struct SettingsView: View {
                         })
                     }
                     Text("description").font(.caption).foregroundColor(.yellow)
-                    Text("Open companion watch app and press sync button").font(.caption)
+                    Text("Open companion watch app and press sync button to export current categories").font(.caption)
                 }
                 .alert(isPresented: $showWatchConnectivityResultAlarm, content: {
                     Alert(title: Text(watchConnectivityResult.rawValue))

@@ -44,7 +44,6 @@ struct EventEndView: View {
 
             VStack {
                 HStack(alignment:.center) {
-                    
                     Button {
                         viewModel.action.exportToCalender.send(())
                     } label: {
@@ -138,6 +137,10 @@ class EventEndViewModel: NSObject, ObservableObject {
             .sink(receiveValue: {
                 let iCalEvent = iCalenderEvent(title: "\(event.emoji)\(event.title)", note: "From MZTimer", time: event.time, startDate: event.startDate)
                 iCalenderHelper.shared.addEvent(event: iCalEvent)
+                DispatchQueue.main.async {
+                    guard let url = URL(string: "calshow://") else { return }
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
             }).store(in: &cancellables)
         
         action.shareToInstagram

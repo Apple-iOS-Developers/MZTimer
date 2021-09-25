@@ -10,8 +10,9 @@ import UIKit
 
 class iMessageHelper {
     class func makeMessage(event: Event) {
-        let username = UserDefaults.standard.value(forKey: "Username") ?? "unknown"
-        let messageBody = "\(username) completed \n[\(event.emoji)\(event.title)]task \ntime:\(event.time.convertTimeToString())"
+        guard let username = UserDefaults.standard.string(forKey: "UserName") else { return }
+
+        let messageBody = "\(username) completed \n[\(event.emoji)\(event.title)] \ntime:\(event.time.convertTimeToString())"
         let urlSafeBody = messageBody.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         let phoneNumber: [String] = UserDefaultStorage.shared.loadContact().map{ $0.phoneNumber }
         let phoneString = phoneNumber.joined(separator: ",")
