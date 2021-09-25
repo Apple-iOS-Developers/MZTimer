@@ -194,7 +194,7 @@ extension ContentView {
             }).sheet(isPresented: $showMadeBy, onDismiss: {
                 showMadeBy = false
             }) {
-                MadeByView()
+                MadeByView(showMadeBy: $showMadeBy)
             }
 
             Spacer()
