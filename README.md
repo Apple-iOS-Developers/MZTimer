@@ -1,6 +1,9 @@
 # SharableTimer
 WatchOS Sharable Timer Side project
 
+v1.0.0
+https://apps.apple.com/kr/app/mztimer/id1582667184
+
 ### v1.0.0 기능 요구사항
 - [x] 타이머를 잴 수 있는 이벤트를 Create Read Update Delete 할 수 있다.  
 - [x] 이벤트 별 통계를 볼 수 있다.  
