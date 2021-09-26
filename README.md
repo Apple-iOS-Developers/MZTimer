@@ -19,9 +19,8 @@ https://apps.apple.com/kr/app/mztimer/id1582667184
 - [x] 이벤트 엔드에서 직접 친구에게 공유 기능
 - [x] 앱 꺼지거나 중단되도 날짜 비교해서 카운터 resume 기능
 - [x] 앱 설치 후 초기 실행시 세팅화면 통해 온보딩
-- [ ] 기록 최소시간 설정 기능
-- [ ] 워치와 연동되어 워치에서 이벤트 시작할 수 있는 기능
-- [ ] 타이머 실행시킨 상황에서 background 진입이나 terminate 될때 로컬 push noti
+- [x] 기록 최소시간 설정 기능
+- [x] 타이머 실행시킨 상황에서 background 진입이나 terminate 될때 로컬 push noti
 
 
 ### 레퍼런스 스크린샷 
