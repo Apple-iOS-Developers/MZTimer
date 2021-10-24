@@ -1,0 +1,25 @@
+name: Swift
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: swift build -v
+    - name: Run tests
+      run: swift test -v
+    - name: Swift Doc
+      uses: SwiftDocOrg/swift-doc@1.0.0-rc.1
+    - name: swift-codecov
+      uses: mattpolzin/swift-codecov-action@0.5.0
+
+
