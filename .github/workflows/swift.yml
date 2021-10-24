@@ -20,7 +20,9 @@ jobs:
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: Run tests
-        run:  xcodebuild clean test -project MZTimer.xcodeproj -scheme MZTimer -destination "platform=iOS Simulator,name=iPhone 11" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+              xcodebuild test -project Algo.xcodeproj -scheme Algo -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=14.4'
+
+        run:  xcodebuild clean test -project MZTimer.xcodeproj -scheme MZTimer -destination "platform=iOS Simulator,name=iPhone 11 Pro, OS=14.5" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
       - name: Swift Doc
         uses: SwiftDocOrg/swift-doc@1.0.0-rc.1
       - name: swift-codecov
