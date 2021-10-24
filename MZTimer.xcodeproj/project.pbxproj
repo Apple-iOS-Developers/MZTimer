@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67C2D03EC7D2B9FF865D0424 /* Pods_MZTimer_WatchKit_ExtensionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DEDB1080261B5CF55EB558 /* Pods_MZTimer_WatchKit_ExtensionTests.framework */; };
 		83830D7026FD75EE003FA23E /* LocalPushHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83830D6F26FD75EE003FA23E /* LocalPushHelper.swift */; };
 		83830D7226FE235A003FA23E /* InstaStoryShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83830D7126FE235A003FA23E /* InstaStoryShareView.swift */; };
 		83830D7426FE3342003FA23E /* MadeByView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83830D7326FE3342003FA23E /* MadeByView.swift */; };
 		83DC60D726FCC91E00E8939A /* InstagramShareHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC60D626FCC91E00E8939A /* InstagramShareHelper.swift */; };
 		83E7B54926D555A700292B35 /* iMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7B54826D555A700292B35 /* iMessageHelper.swift */; };
+		8C0275861119DFA0EEEEAED1 /* Pods_MZTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDF26DC7777662036D54464 /* Pods_MZTimer.framework */; };
+		AFF0849F728D247D25BB1935 /* Pods_MZTimer_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028337850E79E2C6B5F10F3F /* Pods_MZTimer_WatchKit_App.framework */; };
 		CE07EDB92674BD3B00C7B19F /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDB82674BD3B00C7B19F /* CategoryRow.swift */; };
 		CE07EDBB2674EE0F00C7B19F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDBA2674EE0F00C7B19F /* SettingsView.swift */; };
 		CE07EDC12675E78200C7B19F /* iCalenderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDC02675E78200C7B19F /* iCalenderHelper.swift */; };
@@ -63,6 +66,7 @@
 		CEDEF9142663459500FF89D0 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF9132663459500FF89D0 /* WatchManager.swift */; };
 		CEDEF918266348CA00FF89D0 /* WatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF916266348CA00FF89D0 /* WatchViewModel.swift */; };
 		CEDEF91A26634E7400FF89D0 /* AddEventModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEF91926634E7400FF89D0 /* AddEventModal.swift */; };
+		F3098BC2346ED2B0F210E1E5 /* Pods_MZTimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3FB6BD6B5B42E1849E894F /* Pods_MZTimerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,11 +126,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		028337850E79E2C6B5F10F3F /* Pods_MZTimer_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MZTimer_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07DEDB1080261B5CF55EB558 /* Pods_MZTimer_WatchKit_ExtensionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MZTimer_WatchKit_ExtensionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ABF5F121EC7BB0CEBD4CA4F /* Pods-MZTimer WatchKit ExtensionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZTimer WatchKit ExtensionTests.release.xcconfig"; path = "Target Support Files/Pods-MZTimer WatchKit ExtensionTests/Pods-MZTimer WatchKit ExtensionTests.release.xcconfig"; sourceTree = "<group>"; };
+		3B0535875B99964632DA0C47 /* Pods-MZTimer WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZTimer WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-MZTimer WatchKit App/Pods-MZTimer WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		598D914B88D86F41A88B1337 /* Pods-MZTimer WatchKit ExtensionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZTimer WatchKit ExtensionTests.debug.xcconfig"; path = "Target Support Files/Pods-MZTimer WatchKit ExtensionTests/Pods-MZTimer WatchKit ExtensionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6EDF26DC7777662036D54464 /* Pods_MZTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MZTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A9755B4B859287C9978EFE5 /* Pods-MZTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZTimer.debug.xcconfig"; path = "Target Support Files/Pods-MZTimer/Pods-MZTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		8158EC0E5D30CC754CFFD429 /* Pods-MZTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZTimerTests.debug.xcconfig"; path = "Target Support Files/Pods-MZTimerTests/Pods-MZTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		83830D6F26FD75EE003FA23E /* LocalPushHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPushHelper.swift; sourceTree = "<group>"; };
 		83830D7126FE235A003FA23E /* InstaStoryShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaStoryShareView.swift; sourceTree = "<group>"; };
 		83830D7326FE3342003FA23E /* MadeByView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeByView.swift; sourceTree = "<group>"; };
 		83DC60D626FCC91E00E8939A /* InstagramShareHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramShareHelper.swift; sourceTree = "<group>"; };
 		83E7B54826D555A700292B35 /* iMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageHelper.swift; sourceTree = "<group>"; };
+		A6ACDBF81435EF290C0AC250 /* Pods-MZTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZTimerTests.release.xcconfig"; path = "Target Support Files/Pods-MZTimerTests/Pods-MZTimerTests.release.xcconfig"; sourceTree = "<group>"; };
+		C3631F936E504786F0E87406 /* Pods-MZTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZTimer.release.xcconfig"; path = "Target Support Files/Pods-MZTimer/Pods-MZTimer.release.xcconfig"; sourceTree = "<group>"; };
 		CE07EDB82674BD3B00C7B19F /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		CE07EDBA2674EE0F00C7B19F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CE07EDC02675E78200C7B19F /* iCalenderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCalenderHelper.swift; sourceTree = "<group>"; };
@@ -181,13 +195,24 @@
 		CEDEF9132663459500FF89D0 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
 		CEDEF916266348CA00FF89D0 /* WatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewModel.swift; sourceTree = "<group>"; };
 		CEDEF91926634E7400FF89D0 /* AddEventModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventModal.swift; sourceTree = "<group>"; };
+		DE3FB6BD6B5B42E1849E894F /* Pods_MZTimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MZTimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E93A6076A125539BB0DD1E1A /* Pods-MZTimer WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZTimer WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-MZTimer WatchKit App/Pods-MZTimer WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		29D05A67362E7545C3E299E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFF0849F728D247D25BB1935 /* Pods_MZTimer_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE1E4172272582530033C23C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3098BC2346ED2B0F210E1E5 /* Pods_MZTimerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67C2D03EC7D2B9FF865D0424 /* Pods_MZTimer_WatchKit_ExtensionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C0275861119DFA0EEEEAED1 /* Pods_MZTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +242,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		299574DDE255CAFF849A6BE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A9755B4B859287C9978EFE5 /* Pods-MZTimer.debug.xcconfig */,
+				C3631F936E504786F0E87406 /* Pods-MZTimer.release.xcconfig */,
+				E93A6076A125539BB0DD1E1A /* Pods-MZTimer WatchKit App.debug.xcconfig */,
+				3B0535875B99964632DA0C47 /* Pods-MZTimer WatchKit App.release.xcconfig */,
+				598D914B88D86F41A88B1337 /* Pods-MZTimer WatchKit ExtensionTests.debug.xcconfig */,
+				3ABF5F121EC7BB0CEBD4CA4F /* Pods-MZTimer WatchKit ExtensionTests.release.xcconfig */,
+				8158EC0E5D30CC754CFFD429 /* Pods-MZTimerTests.debug.xcconfig */,
+				A6ACDBF81435EF290C0AC250 /* Pods-MZTimerTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		320C032AC108A8A0D0BFB580 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EDF26DC7777662036D54464 /* Pods_MZTimer.framework */,
+				028337850E79E2C6B5F10F3F /* Pods_MZTimer_WatchKit_App.framework */,
+				07DEDB1080261B5CF55EB558 /* Pods_MZTimer_WatchKit_ExtensionTests.framework */,
+				DE3FB6BD6B5B42E1849E894F /* Pods_MZTimerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE07EDB52673BC4500C7B19F /* TimerSection */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +335,8 @@
 				CE1E4176272582530033C23C /* MZTimerTests */,
 				CE1E41832725832C0033C23C /* MZTimer WatchKit ExtensionTests */,
 				CEDEF8AB2662529500FF89D0 /* Products */,
+				299574DDE255CAFF849A6BE3 /* Pods */,
+				320C032AC108A8A0D0BFB580 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -431,6 +487,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE1E417D272582530033C23C /* Build configuration list for PBXNativeTarget "MZTimerTests" */;
 			buildPhases = (
+				01F230DFA7B88658F55C677C /* [CP] Check Pods Manifest.lock */,
 				CE1E4171272582530033C23C /* Sources */,
 				CE1E4172272582530033C23C /* Frameworks */,
 				CE1E4173272582530033C23C /* Resources */,
@@ -449,6 +506,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE1E41882725832C0033C23C /* Build configuration list for PBXNativeTarget "MZTimer WatchKit ExtensionTests" */;
 			buildPhases = (
+				02EDB67B7810DE6599ADD965 /* [CP] Check Pods Manifest.lock */,
 				CE1E417E2725832B0033C23C /* Sources */,
 				CE1E417F2725832B0033C23C /* Frameworks */,
 				CE1E41802725832B0033C23C /* Resources */,
@@ -467,6 +525,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEDEF8E52662529B00FF89D0 /* Build configuration list for PBXNativeTarget "MZTimer" */;
 			buildPhases = (
+				531CB523F22A66C889A16BD1 /* [CP] Check Pods Manifest.lock */,
 				CEDEF8A62662529500FF89D0 /* Sources */,
 				CEDEF8A72662529500FF89D0 /* Frameworks */,
 				CEDEF8A82662529500FF89D0 /* Resources */,
@@ -486,8 +545,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEDEF8E12662529B00FF89D0 /* Build configuration list for PBXNativeTarget "MZTimer WatchKit App" */;
 			buildPhases = (
+				E9713F6E336D92F456B6779C /* [CP] Check Pods Manifest.lock */,
 				CEDEF8B72662529900FF89D0 /* Resources */,
 				CEDEF8E02662529B00FF89D0 /* Embed App Extensions */,
+				29D05A67362E7545C3E299E0 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -609,6 +670,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01F230DFA7B88658F55C677C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MZTimerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		02EDB67B7810DE6599ADD965 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MZTimer WatchKit ExtensionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		531CB523F22A66C889A16BD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MZTimer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9713F6E336D92F456B6779C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MZTimer WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE1E4171272582530033C23C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -715,6 +867,7 @@
 /* Begin XCBuildConfiguration section */
 		CE1E417B272582530033C23C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8158EC0E5D30CC754CFFD429 /* Pods-MZTimerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -741,6 +894,7 @@
 		};
 		CE1E417C272582530033C23C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6ACDBF81435EF290C0AC250 /* Pods-MZTimerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -768,6 +922,7 @@
 		};
 		CE1E41892725832C0033C23C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 598D914B88D86F41A88B1337 /* Pods-MZTimer WatchKit ExtensionTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -794,6 +949,7 @@
 		};
 		CE1E418A2725832C0033C23C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ABF5F121EC7BB0CEBD4CA4F /* Pods-MZTimer WatchKit ExtensionTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -985,6 +1141,7 @@
 		};
 		CEDEF8E22662529B00FF89D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E93A6076A125539BB0DD1E1A /* Pods-MZTimer WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1006,6 +1163,7 @@
 		};
 		CEDEF8E32662529B00FF89D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B0535875B99964632DA0C47 /* Pods-MZTimer WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1028,6 +1186,7 @@
 		};
 		CEDEF8E62662529B00FF89D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A9755B4B859287C9978EFE5 /* Pods-MZTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1052,6 +1211,7 @@
 		};
 		CEDEF8E72662529B00FF89D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3631F936E504786F0E87406 /* Pods-MZTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

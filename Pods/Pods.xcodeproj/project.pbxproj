@@ -1,0 +1,945 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13869F2FD518D901DB69C6EECE68F840 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0A982A9433AACEF8A61353293CF443 /* Foundation.framework */; };
+		25636A5B2E98B1B3398FDAEB7B53F004 /* Pods-MZTimer WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3E67810EC827AED2C7E41B72D70090 /* Pods-MZTimer WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3090873C70A50AB4040E0FADE0A67E88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0A982A9433AACEF8A61353293CF443 /* Foundation.framework */; };
+		6623CB0B4B56811B59245FCC4083C961 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0A982A9433AACEF8A61353293CF443 /* Foundation.framework */; };
+		860FFD74CF5A1EF338045AB490A9E4BE /* Pods-MZTimer WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD8D53B6BD0C2A59B77912C4CB47FA /* Pods-MZTimer WatchKit App-dummy.m */; };
+		A50D21AE6E088C36121F9D75779BA046 /* Pods-MZTimerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8295C070D283324C3A7A58A9F720059A /* Pods-MZTimerTests-dummy.m */; };
+		C1D9D5308F507F1B975C50D40943B158 /* Pods-MZTimer WatchKit ExtensionTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 737929930F75A0ECC007102ED7C716D6 /* Pods-MZTimer WatchKit ExtensionTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D613887777058443167314449D08B298 /* Pods-MZTimerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB60F0902BAF07A250A8405F4CC13086 /* Pods-MZTimerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9A13D83A0FD49DF7CC2D00E78CAAC71 /* Pods-MZTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E20F846C6F9E3B61524E8F92B6F4D52 /* Pods-MZTimer-dummy.m */; };
+		F4C91A8BB6097D550AAE1A821F81EFE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE35B7430FD7C91E8CC808A3540CF2E /* Foundation.framework */; };
+		F91AF99F59AD6E1A476201596716C318 /* Pods-MZTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90A162F31671F153DDF38AE7055E4279 /* Pods-MZTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD74B3AA39DB641F398EBAF7BF1D4BB5 /* Pods-MZTimer WatchKit ExtensionTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA65F147B586C7150F30D409D699E9A2 /* Pods-MZTimer WatchKit ExtensionTests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		363E0981A40A06BD229E0802F7B01B51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4FAD3940B9B683F12708791584D6217;
+			remoteInfo = "Pods-MZTimer";
+		};
+		5DDF32463A6C6218BCDA02BB2116F0DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4FAD3940B9B683F12708791584D6217;
+			remoteInfo = "Pods-MZTimer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1131A71ACA81C26AE3E7676A6A989CBF /* Pods-MZTimer WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MZTimer WatchKit App.modulemap"; sourceTree = "<group>"; };
+		1C3D70608B1FF6DF13A91361774428EA /* Pods-MZTimer WatchKit ExtensionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MZTimer WatchKit ExtensionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1F859E69535E6880CA4286E688A90BAF /* Pods-MZTimerTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MZTimerTests"; path = Pods_MZTimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A30C034059C5419D0B62BAB4F223D96 /* Pods-MZTimerTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MZTimerTests-Info.plist"; sourceTree = "<group>"; };
+		2FAD8D53B6BD0C2A59B77912C4CB47FA /* Pods-MZTimer WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MZTimer WatchKit App-dummy.m"; sourceTree = "<group>"; };
+		38101E0774D48851B24A0AFC68C971BF /* Pods-MZTimer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MZTimer-acknowledgements.plist"; sourceTree = "<group>"; };
+		4477ECDA262A5B4CD4B80039E5230C5D /* Pods-MZTimer WatchKit App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MZTimer WatchKit App-Info.plist"; sourceTree = "<group>"; };
+		5D0A982A9433AACEF8A61353293CF443 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5D11D95C57830C8FF52BC2CD7CBB72EB /* Pods-MZTimer WatchKit ExtensionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MZTimer WatchKit ExtensionTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F275BA47B1855A7CC371F9175BDC1F9 /* Pods-MZTimer WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MZTimer WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		6DB5E423E2B4223FABBD03E19513FF18 /* Pods-MZTimer WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MZTimer WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
+		6E5E9B9F3B3690AD106FC16E5DF704A3 /* Pods-MZTimer WatchKit ExtensionTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MZTimer WatchKit ExtensionTests-Info.plist"; sourceTree = "<group>"; };
+		6F4A6BC67AFC326932182D2726BC4343 /* Pods-MZTimer WatchKit ExtensionTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MZTimer WatchKit ExtensionTests.modulemap"; sourceTree = "<group>"; };
+		737929930F75A0ECC007102ED7C716D6 /* Pods-MZTimer WatchKit ExtensionTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MZTimer WatchKit ExtensionTests-umbrella.h"; sourceTree = "<group>"; };
+		747E3772471E257D1288C98F80EFBF4B /* Pods-MZTimer WatchKit App */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MZTimer WatchKit App"; path = Pods_MZTimer_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8295C070D283324C3A7A58A9F720059A /* Pods-MZTimerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MZTimerTests-dummy.m"; sourceTree = "<group>"; };
+		879DD0680DC462F4FACB590BB84AC827 /* Pods-MZTimerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MZTimerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8E20F846C6F9E3B61524E8F92B6F4D52 /* Pods-MZTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MZTimer-dummy.m"; sourceTree = "<group>"; };
+		90310FF7319141C35A9788CEC8964E7F /* Pods-MZTimer WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MZTimer WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		90A162F31671F153DDF38AE7055E4279 /* Pods-MZTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MZTimer-umbrella.h"; sourceTree = "<group>"; };
+		961D328878622E0D3979992EAD667A47 /* Pods-MZTimer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MZTimer-Info.plist"; sourceTree = "<group>"; };
+		9B54E864D221DFE202354D2E56EEB70B /* Pods-MZTimer WatchKit ExtensionTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MZTimer WatchKit ExtensionTests"; path = Pods_MZTimer_WatchKit_ExtensionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F3BDB9DEA69A55CB94C00AC0B731625 /* Pods-MZTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MZTimer.release.xcconfig"; sourceTree = "<group>"; };
+		AA7D899A3A2CC3FEF18B90E4340C4EA4 /* Pods-MZTimerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MZTimerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		ADBA7CD52D04B5276C5DC48827B247F5 /* Pods-MZTimer WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MZTimer WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		BA65F147B586C7150F30D409D699E9A2 /* Pods-MZTimer WatchKit ExtensionTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MZTimer WatchKit ExtensionTests-dummy.m"; sourceTree = "<group>"; };
+		BB60F0902BAF07A250A8405F4CC13086 /* Pods-MZTimerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MZTimerTests-umbrella.h"; sourceTree = "<group>"; };
+		BF3ED1C368D4726D6DB05188358C5D51 /* Pods-MZTimerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MZTimerTests.modulemap"; sourceTree = "<group>"; };
+		C0C21AFF35F04C4610F813EA1B7A24E6 /* Pods-MZTimer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MZTimer-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C61CAE8241A96113961710A6E3525A76 /* Pods-MZTimer */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MZTimer"; path = Pods_MZTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC72E8DEEE4B08B4FBC9F7D77821C6C5 /* Pods-MZTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MZTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D5CDA285A55199E2F46B7BA4BF8960A8 /* Pods-MZTimer WatchKit ExtensionTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MZTimer WatchKit ExtensionTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DFBE9C06229BE8BA93FFCF86C13BF56E /* Pods-MZTimer WatchKit ExtensionTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MZTimer WatchKit ExtensionTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E35C20FF9061799B5765A085CF39F8BB /* Pods-MZTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MZTimer.modulemap"; sourceTree = "<group>"; };
+		F772BFAE4606352ED151522E6559D9A1 /* Pods-MZTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MZTimerTests.release.xcconfig"; sourceTree = "<group>"; };
+		FC3E67810EC827AED2C7E41B72D70090 /* Pods-MZTimer WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MZTimer WatchKit App-umbrella.h"; sourceTree = "<group>"; };
+		FCE35B7430FD7C91E8CC808A3540CF2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FF5B7E1534EFCB6BBC3D7753152C77B7 /* Pods-MZTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MZTimer.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30B9D2DDE42AB2AE687F7A65454A7A4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C91A8BB6097D550AAE1A821F81EFE1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A7BC76FE77E0740F2B81E7A711B55D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13869F2FD518D901DB69C6EECE68F840 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CD11E3AAA4F0AD3AFC6F8BBD6472FCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6623CB0B4B56811B59245FCC4083C961 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAA83A514785CFC119A519621010EC53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3090873C70A50AB4040E0FADE0A67E88 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03FBABE5ACCBF0D21AB61D364299D310 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5D0A982A9433AACEF8A61353293CF443 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		0D98DF2136B5B556A9213C8480FBECDD /* Pods-MZTimer WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				1131A71ACA81C26AE3E7676A6A989CBF /* Pods-MZTimer WatchKit App.modulemap */,
+				90310FF7319141C35A9788CEC8964E7F /* Pods-MZTimer WatchKit App-acknowledgements.markdown */,
+				6DB5E423E2B4223FABBD03E19513FF18 /* Pods-MZTimer WatchKit App-acknowledgements.plist */,
+				2FAD8D53B6BD0C2A59B77912C4CB47FA /* Pods-MZTimer WatchKit App-dummy.m */,
+				4477ECDA262A5B4CD4B80039E5230C5D /* Pods-MZTimer WatchKit App-Info.plist */,
+				FC3E67810EC827AED2C7E41B72D70090 /* Pods-MZTimer WatchKit App-umbrella.h */,
+				5F275BA47B1855A7CC371F9175BDC1F9 /* Pods-MZTimer WatchKit App.debug.xcconfig */,
+				ADBA7CD52D04B5276C5DC48827B247F5 /* Pods-MZTimer WatchKit App.release.xcconfig */,
+			);
+			name = "Pods-MZTimer WatchKit App";
+			path = "Target Support Files/Pods-MZTimer WatchKit App";
+			sourceTree = "<group>";
+		};
+		4F257B344C4D4359DC1361E175AC6F73 /* Pods-MZTimer WatchKit ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				6F4A6BC67AFC326932182D2726BC4343 /* Pods-MZTimer WatchKit ExtensionTests.modulemap */,
+				D5CDA285A55199E2F46B7BA4BF8960A8 /* Pods-MZTimer WatchKit ExtensionTests-acknowledgements.markdown */,
+				DFBE9C06229BE8BA93FFCF86C13BF56E /* Pods-MZTimer WatchKit ExtensionTests-acknowledgements.plist */,
+				BA65F147B586C7150F30D409D699E9A2 /* Pods-MZTimer WatchKit ExtensionTests-dummy.m */,
+				6E5E9B9F3B3690AD106FC16E5DF704A3 /* Pods-MZTimer WatchKit ExtensionTests-Info.plist */,
+				737929930F75A0ECC007102ED7C716D6 /* Pods-MZTimer WatchKit ExtensionTests-umbrella.h */,
+				1C3D70608B1FF6DF13A91361774428EA /* Pods-MZTimer WatchKit ExtensionTests.debug.xcconfig */,
+				5D11D95C57830C8FF52BC2CD7CBB72EB /* Pods-MZTimer WatchKit ExtensionTests.release.xcconfig */,
+			);
+			name = "Pods-MZTimer WatchKit ExtensionTests";
+			path = "Target Support Files/Pods-MZTimer WatchKit ExtensionTests";
+			sourceTree = "<group>";
+		};
+		54CCD06893F300F5B2C02DAFD57093E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03FBABE5ACCBF0D21AB61D364299D310 /* iOS */,
+				8B063FB5829CC11F1F48DAAF9305FCB4 /* watchOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64CCB790D71BC2034923484247D8A82C /* Pods-MZTimer */ = {
+			isa = PBXGroup;
+			children = (
+				E35C20FF9061799B5765A085CF39F8BB /* Pods-MZTimer.modulemap */,
+				C0C21AFF35F04C4610F813EA1B7A24E6 /* Pods-MZTimer-acknowledgements.markdown */,
+				38101E0774D48851B24A0AFC68C971BF /* Pods-MZTimer-acknowledgements.plist */,
+				8E20F846C6F9E3B61524E8F92B6F4D52 /* Pods-MZTimer-dummy.m */,
+				961D328878622E0D3979992EAD667A47 /* Pods-MZTimer-Info.plist */,
+				90A162F31671F153DDF38AE7055E4279 /* Pods-MZTimer-umbrella.h */,
+				FF5B7E1534EFCB6BBC3D7753152C77B7 /* Pods-MZTimer.debug.xcconfig */,
+				9F3BDB9DEA69A55CB94C00AC0B731625 /* Pods-MZTimer.release.xcconfig */,
+			);
+			name = "Pods-MZTimer";
+			path = "Target Support Files/Pods-MZTimer";
+			sourceTree = "<group>";
+		};
+		7399850D7120037D7BF0FCE75CA42968 /* Pods-MZTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF3ED1C368D4726D6DB05188358C5D51 /* Pods-MZTimerTests.modulemap */,
+				879DD0680DC462F4FACB590BB84AC827 /* Pods-MZTimerTests-acknowledgements.markdown */,
+				AA7D899A3A2CC3FEF18B90E4340C4EA4 /* Pods-MZTimerTests-acknowledgements.plist */,
+				8295C070D283324C3A7A58A9F720059A /* Pods-MZTimerTests-dummy.m */,
+				2A30C034059C5419D0B62BAB4F223D96 /* Pods-MZTimerTests-Info.plist */,
+				BB60F0902BAF07A250A8405F4CC13086 /* Pods-MZTimerTests-umbrella.h */,
+				CC72E8DEEE4B08B4FBC9F7D77821C6C5 /* Pods-MZTimerTests.debug.xcconfig */,
+				F772BFAE4606352ED151522E6559D9A1 /* Pods-MZTimerTests.release.xcconfig */,
+			);
+			name = "Pods-MZTimerTests";
+			path = "Target Support Files/Pods-MZTimerTests";
+			sourceTree = "<group>";
+		};
+		8B063FB5829CC11F1F48DAAF9305FCB4 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				FCE35B7430FD7C91E8CC808A3540CF2E /* Foundation.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		9FC77EA22048B774416B4CDC5153EFA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C61CAE8241A96113961710A6E3525A76 /* Pods-MZTimer */,
+				747E3772471E257D1288C98F80EFBF4B /* Pods-MZTimer WatchKit App */,
+				9B54E864D221DFE202354D2E56EEB70B /* Pods-MZTimer WatchKit ExtensionTests */,
+				1F859E69535E6880CA4286E688A90BAF /* Pods-MZTimerTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				54CCD06893F300F5B2C02DAFD57093E1 /* Frameworks */,
+				9FC77EA22048B774416B4CDC5153EFA6 /* Products */,
+				E4704D1469D6203A081A3D2581776C73 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E4704D1469D6203A081A3D2581776C73 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				64CCB790D71BC2034923484247D8A82C /* Pods-MZTimer */,
+				0D98DF2136B5B556A9213C8480FBECDD /* Pods-MZTimer WatchKit App */,
+				4F257B344C4D4359DC1361E175AC6F73 /* Pods-MZTimer WatchKit ExtensionTests */,
+				7399850D7120037D7BF0FCE75CA42968 /* Pods-MZTimerTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0B3E8F5D787DC91F405B3AD3C9AE7F7A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25636A5B2E98B1B3398FDAEB7B53F004 /* Pods-MZTimer WatchKit App-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17D6B9FEB9D2318DB9287A5102C0B811 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F91AF99F59AD6E1A476201596716C318 /* Pods-MZTimer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28BA0E35460C31A667D4BB3B893582C9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D613887777058443167314449D08B298 /* Pods-MZTimerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C16A836EB6AD230698296EF90254FC9E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1D9D5308F507F1B975C50D40943B158 /* Pods-MZTimer WatchKit ExtensionTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3280AF287FD63CA585B12AF31BBBE613 /* Pods-MZTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAD1BEC5C8519AB647902645D64114FD /* Build configuration list for PBXNativeTarget "Pods-MZTimerTests" */;
+			buildPhases = (
+				28BA0E35460C31A667D4BB3B893582C9 /* Headers */,
+				340F6C6F20918F3C9923CBF0AF2160DB /* Sources */,
+				83A7BC76FE77E0740F2B81E7A711B55D /* Frameworks */,
+				F6A18ED8C3F26E097568D18AEA8C617B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56A6E59B43A75309705A72C5EF514A53 /* PBXTargetDependency */,
+			);
+			name = "Pods-MZTimerTests";
+			productName = Pods_MZTimerTests;
+			productReference = 1F859E69535E6880CA4286E688A90BAF /* Pods-MZTimerTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		98F18FEC80346CE08270EBCB357E53DE /* Pods-MZTimer WatchKit ExtensionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E5904261BC4CA21C6E0475FA37A448D /* Build configuration list for PBXNativeTarget "Pods-MZTimer WatchKit ExtensionTests" */;
+			buildPhases = (
+				C16A836EB6AD230698296EF90254FC9E /* Headers */,
+				7134D32B3AE29A9F6C7DC6525D79283A /* Sources */,
+				9CD11E3AAA4F0AD3AFC6F8BBD6472FCE /* Frameworks */,
+				9726680606062F1C7237B59585C4BB8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE4A1CB592F270BBE089C81475F413DD /* PBXTargetDependency */,
+			);
+			name = "Pods-MZTimer WatchKit ExtensionTests";
+			productName = Pods_MZTimer_WatchKit_ExtensionTests;
+			productReference = 9B54E864D221DFE202354D2E56EEB70B /* Pods-MZTimer WatchKit ExtensionTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		9ED3B005FE0BCFB031EDEB6A780C1EB1 /* Pods-MZTimer WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362B9AFE9A8CB51CED4B7B21CE0AAF53 /* Build configuration list for PBXNativeTarget "Pods-MZTimer WatchKit App" */;
+			buildPhases = (
+				0B3E8F5D787DC91F405B3AD3C9AE7F7A /* Headers */,
+				3744ADBFDC8F4A9A28EBF3612D6041B5 /* Sources */,
+				30B9D2DDE42AB2AE687F7A65454A7A4F /* Frameworks */,
+				8B22D048C493ADADDD6E5FE0329C343A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MZTimer WatchKit App";
+			productName = Pods_MZTimer_WatchKit_App;
+			productReference = 747E3772471E257D1288C98F80EFBF4B /* Pods-MZTimer WatchKit App */;
+			productType = "com.apple.product-type.framework";
+		};
+		A4FAD3940B9B683F12708791584D6217 /* Pods-MZTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE91966EF14A14B9D95A3B97DAE5256F /* Build configuration list for PBXNativeTarget "Pods-MZTimer" */;
+			buildPhases = (
+				17D6B9FEB9D2318DB9287A5102C0B811 /* Headers */,
+				C57453F14C664DE67A7593E598E50953 /* Sources */,
+				EAA83A514785CFC119A519621010EC53 /* Frameworks */,
+				1772BF990F3F1DAF1F12381B4E0988B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MZTimer";
+			productName = Pods_MZTimer;
+			productReference = C61CAE8241A96113961710A6E3525A76 /* Pods-MZTimer */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 9FC77EA22048B774416B4CDC5153EFA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4FAD3940B9B683F12708791584D6217 /* Pods-MZTimer */,
+				9ED3B005FE0BCFB031EDEB6A780C1EB1 /* Pods-MZTimer WatchKit App */,
+				98F18FEC80346CE08270EBCB357E53DE /* Pods-MZTimer WatchKit ExtensionTests */,
+				3280AF287FD63CA585B12AF31BBBE613 /* Pods-MZTimerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1772BF990F3F1DAF1F12381B4E0988B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B22D048C493ADADDD6E5FE0329C343A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9726680606062F1C7237B59585C4BB8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6A18ED8C3F26E097568D18AEA8C617B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		340F6C6F20918F3C9923CBF0AF2160DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50D21AE6E088C36121F9D75779BA046 /* Pods-MZTimerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3744ADBFDC8F4A9A28EBF3612D6041B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				860FFD74CF5A1EF338045AB490A9E4BE /* Pods-MZTimer WatchKit App-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7134D32B3AE29A9F6C7DC6525D79283A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD74B3AA39DB641F398EBAF7BF1D4BB5 /* Pods-MZTimer WatchKit ExtensionTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C57453F14C664DE67A7593E598E50953 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9A13D83A0FD49DF7CC2D00E78CAAC71 /* Pods-MZTimer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56A6E59B43A75309705A72C5EF514A53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MZTimer";
+			target = A4FAD3940B9B683F12708791584D6217 /* Pods-MZTimer */;
+			targetProxy = 363E0981A40A06BD229E0802F7B01B51 /* PBXContainerItemProxy */;
+		};
+		AE4A1CB592F270BBE089C81475F413DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MZTimer";
+			target = A4FAD3940B9B683F12708791584D6217 /* Pods-MZTimer */;
+			targetProxy = 5DDF32463A6C6218BCDA02BB2116F0DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03C81D36FA7836F59D5D30BE940E2730 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF5B7E1534EFCB6BBC3D7753152C77B7 /* Pods-MZTimer.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MZTimer/Pods-MZTimer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MZTimer/Pods-MZTimer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		04FE93126197E6B114853DEC8194F929 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F3BDB9DEA69A55CB94C00AC0B731625 /* Pods-MZTimer.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MZTimer/Pods-MZTimer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MZTimer/Pods-MZTimer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		082FCEDE968B48E4AA270BA45ADB5417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F772BFAE4606352ED151522E6559D9A1 /* Pods-MZTimerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MZTimerTests/Pods-MZTimerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MZTimerTests/Pods-MZTimerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		116E842196C9132D00EF1FFEDF24EBF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADBA7CD52D04B5276C5DC48827B247F5 /* Pods-MZTimer WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MZTimer WatchKit App/Pods-MZTimer WatchKit App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MZTimer WatchKit App/Pods-MZTimer WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		26E2AD6499A694245108B4E610D42044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F275BA47B1855A7CC371F9175BDC1F9 /* Pods-MZTimer WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MZTimer WatchKit App/Pods-MZTimer WatchKit App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MZTimer WatchKit App/Pods-MZTimer WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		6865CBDD8D22108AC0D774294DFD3ADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		78B8D613079D77397D1143268B20077A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC72E8DEEE4B08B4FBC9F7D77821C6C5 /* Pods-MZTimerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MZTimerTests/Pods-MZTimerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MZTimerTests/Pods-MZTimerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA65B153E2D043EA1B60C38C81D632E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C3D70608B1FF6DF13A91361774428EA /* Pods-MZTimer WatchKit ExtensionTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MZTimer WatchKit ExtensionTests/Pods-MZTimer WatchKit ExtensionTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MZTimer WatchKit ExtensionTests/Pods-MZTimer WatchKit ExtensionTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DF893AE5FAC31C6150ECB7AC2AF65D38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		DFB950FAFC7CE2812C1C6DB6A2BE56C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D11D95C57830C8FF52BC2CD7CBB72EB /* Pods-MZTimer WatchKit ExtensionTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MZTimer WatchKit ExtensionTests/Pods-MZTimer WatchKit ExtensionTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MZTimer WatchKit ExtensionTests/Pods-MZTimer WatchKit ExtensionTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E5904261BC4CA21C6E0475FA37A448D /* Build configuration list for PBXNativeTarget "Pods-MZTimer WatchKit ExtensionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA65B153E2D043EA1B60C38C81D632E8 /* Debug */,
+				DFB950FAFC7CE2812C1C6DB6A2BE56C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		362B9AFE9A8CB51CED4B7B21CE0AAF53 /* Build configuration list for PBXNativeTarget "Pods-MZTimer WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26E2AD6499A694245108B4E610D42044 /* Debug */,
+				116E842196C9132D00EF1FFEDF24EBF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF893AE5FAC31C6150ECB7AC2AF65D38 /* Debug */,
+				6865CBDD8D22108AC0D774294DFD3ADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE91966EF14A14B9D95A3B97DAE5256F /* Build configuration list for PBXNativeTarget "Pods-MZTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03C81D36FA7836F59D5D30BE940E2730 /* Debug */,
+				04FE93126197E6B114853DEC8194F929 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAD1BEC5C8519AB647902645D64114FD /* Build configuration list for PBXNativeTarget "Pods-MZTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78B8D613079D77397D1143268B20077A /* Debug */,
+				082FCEDE968B48E4AA270BA45ADB5417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
