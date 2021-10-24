@@ -12,7 +12,7 @@ jobs:
     runs-on: macos-latest
     defaults:
       run:
-        working-directory: ./MZTimer
+        working-directory: ./
         
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
