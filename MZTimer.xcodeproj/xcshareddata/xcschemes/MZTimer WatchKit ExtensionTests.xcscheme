@@ -35,8 +35,10 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       notificationPayloadFile = "MZTimer WatchKit Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/MZTimer">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEDEF8B82662529900FF89D0"
@@ -44,7 +46,7 @@
             BlueprintName = "MZTimer WatchKit App"
             ReferencedContainer = "container:MZTimer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

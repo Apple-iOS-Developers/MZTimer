@@ -66,8 +66,10 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "MZTimer WatchKit Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/MZTimer">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEDEF8B82662529900FF89D0"
@@ -75,7 +77,7 @@
             BlueprintName = "MZTimer WatchKit App"
             ReferencedContainer = "container:MZTimer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -85,8 +87,10 @@
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "MZTimer WatchKit Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/MZTimer">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEDEF8B82662529900FF89D0"
@@ -94,7 +98,16 @@
             BlueprintName = "MZTimer WatchKit App"
             ReferencedContainer = "container:MZTimer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CEDEF8B82662529900FF89D0"
+            BuildableName = "MZTimer WatchKit App.app"
+            BlueprintName = "MZTimer WatchKit App"
+            ReferencedContainer = "container:MZTimer.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
