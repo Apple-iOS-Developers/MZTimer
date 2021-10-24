@@ -17,6 +17,8 @@
 		CE07EDC12675E78200C7B19F /* iCalenderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDC02675E78200C7B19F /* iCalenderHelper.swift */; };
 		CE07EDC42675F82700C7B19F /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDC32675F82700C7B19F /* TimerViewModel.swift */; };
 		CE07EDC62675F93600C7B19F /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07EDC52675F93600C7B19F /* EventRow.swift */; };
+		CE1E4178272582530033C23C /* MZTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E4177272582530033C23C /* MZTimerTests.swift */; };
+		CE1E41852725832C0033C23C /* MZTimer_WatchKit_ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E41842725832C0033C23C /* MZTimer_WatchKit_ExtensionTests.swift */; };
 		CE54F16726F7734300FE4B84 /* WatchUserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54F16626F7734300FE4B84 /* WatchUserDefaultStorage.swift */; };
 		CE54F16B26F7770C00FE4B84 /* WatchTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54F16A26F7770C00FE4B84 /* WatchTimerViewModel.swift */; };
 		CE54F16E26F77AEE00FE4B84 /* WatchiMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54F16D26F77AEE00FE4B84 /* WatchiMessageHelper.swift */; };
@@ -64,6 +66,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CE1E4179272582530033C23C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDEF8A22662529500FF89D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDEF8A92662529500FF89D0;
+			remoteInfo = MZTimer;
+		};
+		CE1E41862725832C0033C23C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDEF8A22662529500FF89D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDEF8C42662529A00FF89D0;
+			remoteInfo = "MZTimer WatchKit Extension";
+		};
 		CEDEF8BB2662529900FF89D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CEDEF8A22662529500FF89D0 /* Project object */;
@@ -116,6 +132,10 @@
 		CE07EDC02675E78200C7B19F /* iCalenderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCalenderHelper.swift; sourceTree = "<group>"; };
 		CE07EDC32675F82700C7B19F /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		CE07EDC52675F93600C7B19F /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
+		CE1E4175272582530033C23C /* MZTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MZTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1E4177272582530033C23C /* MZTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZTimerTests.swift; sourceTree = "<group>"; };
+		CE1E41822725832B0033C23C /* MZTimer WatchKit ExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MZTimer WatchKit ExtensionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1E41842725832C0033C23C /* MZTimer_WatchKit_ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZTimer_WatchKit_ExtensionTests.swift; sourceTree = "<group>"; };
 		CE54F16626F7734300FE4B84 /* WatchUserDefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchUserDefaultStorage.swift; sourceTree = "<group>"; };
 		CE54F16A26F7770C00FE4B84 /* WatchTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTimerViewModel.swift; sourceTree = "<group>"; };
 		CE54F16D26F77AEE00FE4B84 /* WatchiMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchiMessageHelper.swift; sourceTree = "<group>"; };
@@ -164,6 +184,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CE1E4172272582530033C23C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1E417F2725832B0033C23C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEDEF8A72662529500FF89D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,6 +221,22 @@
 				CE07EDC32675F82700C7B19F /* TimerViewModel.swift */,
 			);
 			path = TimerSection;
+			sourceTree = "<group>";
+		};
+		CE1E4176272582530033C23C /* MZTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE1E4177272582530033C23C /* MZTimerTests.swift */,
+			);
+			path = MZTimerTests;
+			sourceTree = "<group>";
+		};
+		CE1E41832725832C0033C23C /* MZTimer WatchKit ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE1E41842725832C0033C23C /* MZTimer_WatchKit_ExtensionTests.swift */,
+			);
+			path = "MZTimer WatchKit ExtensionTests";
 			sourceTree = "<group>";
 		};
 		CE28D4FE26F2371400B6EA04 /* Helper */ = {
@@ -228,6 +278,8 @@
 				CEDEF8AC2662529500FF89D0 /* MZTimer */,
 				CEDEF8BD2662529900FF89D0 /* MZTimer WatchKit App */,
 				CEDEF8C92662529A00FF89D0 /* MZTimer WatchKit Extension */,
+				CE1E4176272582530033C23C /* MZTimerTests */,
+				CE1E41832725832C0033C23C /* MZTimer WatchKit ExtensionTests */,
 				CEDEF8AB2662529500FF89D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -238,6 +290,8 @@
 				CEDEF8AA2662529500FF89D0 /* MZTimer.app */,
 				CEDEF8B92662529900FF89D0 /* MZTimer WatchKit App.app */,
 				CEDEF8C52662529A00FF89D0 /* MZTimer WatchKit Extension.appex */,
+				CE1E4175272582530033C23C /* MZTimerTests.xctest */,
+				CE1E41822725832B0033C23C /* MZTimer WatchKit ExtensionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -373,6 +427,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CE1E4174272582530033C23C /* MZTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE1E417D272582530033C23C /* Build configuration list for PBXNativeTarget "MZTimerTests" */;
+			buildPhases = (
+				CE1E4171272582530033C23C /* Sources */,
+				CE1E4172272582530033C23C /* Frameworks */,
+				CE1E4173272582530033C23C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE1E417A272582530033C23C /* PBXTargetDependency */,
+			);
+			name = MZTimerTests;
+			productName = MZTimerTests;
+			productReference = CE1E4175272582530033C23C /* MZTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE1E41812725832B0033C23C /* MZTimer WatchKit ExtensionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE1E41882725832C0033C23C /* Build configuration list for PBXNativeTarget "MZTimer WatchKit ExtensionTests" */;
+			buildPhases = (
+				CE1E417E2725832B0033C23C /* Sources */,
+				CE1E417F2725832B0033C23C /* Frameworks */,
+				CE1E41802725832B0033C23C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE1E41872725832C0033C23C /* PBXTargetDependency */,
+			);
+			name = "MZTimer WatchKit ExtensionTests";
+			productName = "MZTimer WatchKit ExtensionTests";
+			productReference = CE1E41822725832B0033C23C /* MZTimer WatchKit ExtensionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CEDEF8A92662529500FF89D0 /* MZTimer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEDEF8E52662529B00FF89D0 /* Build configuration list for PBXNativeTarget "MZTimer" */;
@@ -432,9 +522,17 @@
 		CEDEF8A22662529500FF89D0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					CE1E4174272582530033C23C = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = CEDEF8A92662529500FF89D0;
+					};
+					CE1E41812725832B0033C23C = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = CEDEF8C42662529A00FF89D0;
+					};
 					CEDEF8A92662529500FF89D0 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -462,11 +560,27 @@
 				CEDEF8A92662529500FF89D0 /* MZTimer */,
 				CEDEF8B82662529900FF89D0 /* MZTimer WatchKit App */,
 				CEDEF8C42662529A00FF89D0 /* MZTimer WatchKit Extension */,
+				CE1E4174272582530033C23C /* MZTimerTests */,
+				CE1E41812725832B0033C23C /* MZTimer WatchKit ExtensionTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CE1E4173272582530033C23C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1E41802725832B0033C23C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEDEF8A82662529500FF89D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,6 +610,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CE1E4171272582530033C23C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE1E4178272582530033C23C /* MZTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1E417E2725832B0033C23C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE1E41852725832C0033C23C /* MZTimer_WatchKit_ExtensionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEDEF8A62662529500FF89D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -560,6 +690,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CE1E417A272582530033C23C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDEF8A92662529500FF89D0 /* MZTimer */;
+			targetProxy = CE1E4179272582530033C23C /* PBXContainerItemProxy */;
+		};
+		CE1E41872725832C0033C23C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDEF8C42662529A00FF89D0 /* MZTimer WatchKit Extension */;
+			targetProxy = CE1E41862725832C0033C23C /* PBXContainerItemProxy */;
+		};
 		CEDEF8BC2662529900FF89D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CEDEF8B82662529900FF89D0 /* MZTimer WatchKit App */;
@@ -573,6 +713,112 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CE1E417B272582530033C23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Y5NYS23KM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uuzaza.MZTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MZTimer.app/MZTimer";
+			};
+			name = Debug;
+		};
+		CE1E417C272582530033C23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Y5NYS23KM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uuzaza.MZTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MZTimer.app/MZTimer";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE1E41892725832C0033C23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Y5NYS23KM;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uuzaza.MZTimer-WatchKit-ExtensionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MZTimer WatchKit Extension.appex/MZTimer WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		CE1E418A2725832C0033C23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Y5NYS23KM;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uuzaza.MZTimer-WatchKit-ExtensionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MZTimer WatchKit Extension.appex/MZTimer WatchKit Extension";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
 		CEDEF8DB2662529B00FF89D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -830,6 +1076,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE1E417D272582530033C23C /* Build configuration list for PBXNativeTarget "MZTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE1E417B272582530033C23C /* Debug */,
+				CE1E417C272582530033C23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE1E41882725832C0033C23C /* Build configuration list for PBXNativeTarget "MZTimer WatchKit ExtensionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE1E41892725832C0033C23C /* Debug */,
+				CE1E418A2725832C0033C23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CEDEF8A52662529500FF89D0 /* Build configuration list for PBXProject "MZTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
