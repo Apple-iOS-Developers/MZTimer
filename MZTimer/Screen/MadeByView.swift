@@ -99,7 +99,7 @@ struct MadeByView: View {
         let paramter: [String : Any] = ["title" : title, "body" : comment , "labels" : [email]]
         let jsonData = try? JSONSerialization.data(withJSONObject: paramter)
         request.httpBody = jsonData
-        request.allHTTPHeaderFields = ["Authorization" : "Bearer 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",
+        request.allHTTPHeaderFields = ["Authorization" : "",
                                        "Content-Type" : "application/josn"]
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let httpResponse = response as? HTTPURLResponse {
